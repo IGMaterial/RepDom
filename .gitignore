@@ -1,0 +1,93 @@
+# =========================
+# FHIR IG Publisher output
+# =========================
+output/
+temp/
+template/
+output-temp/
+qa/
+qa.html
+qa.txt
+qa.min.html
+
+# =========================
+# SUSHI / FSH generated files
+# =========================
+fsh-generated/
+.fsh-generated/
+
+# =========================
+# IG Publisher cache / large files
+# =========================
+input-cache/
+fhir-package-cache/
+.fhir/
+.tx-cache/
+txcache/
+**/txcache/
+
+# Publisher / validator JARs
+org.hl7.fhir.publisher.jar
+publisher.jar
+validator_cli.jar
+input-cache/org.hl7.fhir.publisher.jar
+input-cache/publisher.jar
+
+# Generated schemas / package indexes
+input-cache/schemas/
+**/.index.json
+**/.index.db
+
+# =========================
+# Node / SUSHI local deps
+# =========================
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-store/
+
+# Do NOT ignore package-lock.json if you use npm for reproducible builds
+# package-lock.json
+
+# =========================
+# Java / build artifacts
+# =========================
+*.class
+*.log
+hs_err_pid*
+replay_pid*
+
+# =========================
+# Local environment / secrets
+# =========================
+.env
+.env.*
+!.env.example
+
+# =========================
+# OS files
+# =========================
+.DS_Store
+.DS_Store?
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# =========================
+# IDE/editor files
+# =========================
+.vscode/
+.idea/
+*.iml
+*.swp
+*.swo
+
+# =========================
+# Backups / temporary files
+# =========================
+*.bak
+*.tmp
+*.temp
+*.orig
+~$*

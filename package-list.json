@@ -1,0 +1,17 @@
+{
+  "package-id": "fhir.do.core",
+  "title": "Guía Core FHIR RD",
+  "canonical": "https://digital.msp.gob.do/fhir/core",
+  "introduction": "Guía Core FHIR RD.",
+  "list": [
+    {
+      "version": "0.1.0",
+      "desc": "Versión inicial en desarrollo",
+      "path": "https://digital.msp.gob.do/fhir/core/0.1.0",
+      "status": "draft",
+      "sequence": "Draft",
+      "fhirversion": "4.0.1",
+      "current": true
+    }
+  ]
+}

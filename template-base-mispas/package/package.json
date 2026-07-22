@@ -1,0 +1,12 @@
+{
+ "name": "template-base-mispas",
+ "type": "fhir.template",
+ "version": "0.1-0-draft",
+ "license": "CC0-1.0",
+ "author": "Ministerio de Salud Publica y Asistencia Social",
+ "description": "Plantilla Base para Guias de Implementacion del MIPSAS",
+ "base": "fhir.base.template",
+ "dependencies": {
+    "fhir.base.template": "current"
+ }
+}

@@ -1,0 +1,60 @@
+id: fhir.do.core
+canonical: https://digital.msp.gob.do/fhir/core
+name: fhir-core-ig-do
+title: "Guía Core FHIR DO"
+description: "Guía Core Nacional de República Dominicana para recursos, extensiones, terminologías y patrones comunes de interoperabilidad FHIR."
+language: es
+license: CC-BY-4.0
+status: draft
+version: 0.1.0
+fhirVersion: 4.0.1
+copyrightYear: 2026
+releaseLabel: "ci-build"
+jurisdiction: urn:iso:std:iso:3166#DO "Dominican Republic"
+publisher:
+  name: "Ministerio de Salud Pública y Asistencia Social"
+  url: "https://msp.gob.do"
+parameters:
+  show-inherited-invariants: false
+  apply-contact: true
+
+pages:
+  index.md:
+    title: Inicio
+  descargas.md:
+    title: Descargas
+  ejemplos.md:
+    title: Ejemplos
+  extensiones.md:
+    title: Extensiones
+  flujo.md:
+    title: Flujo de Intercambio
+  perfiles.md:
+    title: Perfiles
+  seguridad.md:
+    title: Seguridad
+  terminologias.md:
+    title: Terminologias
+  validacion.md:
+    title: Validación
+
+menu:
+  Inicio: index.html
+  Guía:
+    Flujo de Intercambio: flujo.html
+    Seguridad: seguridad.html
+    Validación: validacion.html
+  Artefactos:
+    Resumen: artifacts.html
+    Perfiles: perfiles.html
+    Extensiones: extensiones.html
+    Terminologías: terminologias.html
+    Ejemplos: ejemplos.html
+    Descargas: descargas.html
+
+contact:
+  - name: Joel Tavárez
+    telecom:
+      - system: email
+        value: joel.tavarez@ministeriodesalud.gob.do
+        use: work
