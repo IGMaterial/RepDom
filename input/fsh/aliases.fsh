@@ -11,3 +11,16 @@ Alias: $medicationrequest-status = http://hl7.org/fhir/CodeSystem/medicationrequ
 Alias: $request-intent = http://hl7.org/fhir/request-intent
 Alias: $bundle-type = http://hl7.org/fhir/bundle-type
 Alias: $composition-status = http://hl7.org/fhir/composition-status
+
+
+Alias: $Core = https://digital.msp.gob.do/fhir/core/StructureDefinition
+Alias: $CorePacienteDO = https://digital.msp.gob.do/fhir/core/StructureDefinition/core-patient-do
+Alias: $CoreOrganizacionDO = https://digital.msp.gob.do/fhir/core/StructureDefinition/core-organization-do
+Alias: $CorePrestadorDO = https://digital.msp.gob.do/fhir/core/StructureDefinition/core-practitioner-do
+Alias: $CoreCS = https://digital.msp.gob.do/fhir/core/CodeSystem
+Alias: $CoreVS = https://digital.msp.gob.do/fhir/core/ValueSet
+Alias: $IPS = http://hl7.org/fhir/uv/ips/StructureDefinition
+Alias: $SCT = http://snomed.info/sct
+Alias: $LOINC = http://loinc.org
+Alias: $UCUM = http://unitsofmeasure.org
+Alias: $IPSCompositionDO = https://digital.msp.gob.do/fhir/ips/StructureDefinition/ips-composition-rd

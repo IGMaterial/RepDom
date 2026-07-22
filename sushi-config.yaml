@@ -14,29 +14,33 @@ jurisdiction: urn:iso:std:iso:3166#DO "Dominican Republic"
 publisher:
   name: "Ministerio de Salud Pública y Asistencia Social"
   url: "https://msp.gob.do"
+
+dependencies:
+  hl7.fhir.uv.ips: 2.0.0-ballot
+
 parameters:
   show-inherited-invariants: false
   apply-contact: true
 
-pages:
-  index.md:
-    title: Inicio
-  descargas.md:
-    title: Descargas
-  ejemplos.md:
-    title: Ejemplos
-  extensiones.md:
-    title: Extensiones
-  flujo.md:
-    title: Flujo de Intercambio
-  perfiles.md:
-    title: Perfiles
-  seguridad.md:
-    title: Seguridad
-  terminologias.md:
-    title: Terminologias
-  validacion.md:
-    title: Validación
+# pages:
+#   index.md:
+#     title: Inicio
+#   descargas.md:
+#     title: Descargas
+#   ejemplos.md:
+#     title: Ejemplos
+#   extensiones.md:
+#     title: Extensiones
+#   flujo.md:
+#     title: Flujo de Intercambio
+#   perfiles.md:
+#     title: Perfiles
+#   seguridad.md:
+#     title: Seguridad
+#   terminologias.md:
+#     title: Terminologias
+#   validacion.md:
+#     title: Validación
 
 menu:
   Inicio: index.html
