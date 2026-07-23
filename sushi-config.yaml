@@ -1,8 +1,13 @@
 id: fhir.do.core
+## msp.fhir.do ?? 
 canonical: https://digital.msp.gob.do/fhir/core
+## canonical: https://digital.msp.gob.do/fhir/conectaton  ?? 
 name: fhir-core-ig-do
-title: "Guía Core FHIR DO"
-description: "Guía Core Nacional de República Dominicana para recursos, extensiones, terminologías y patrones comunes de interoperabilidad FHIR."
+
+## name: fhir-ig-do ?? 
+
+title: "Guía FHIR DO"
+description: "Guía Conectaton Nacional de República Dominicana para recursos, extensiones, terminologías y patrones comunes de interoperabilidad FHIR."
 language: es
 license: CC-BY-4.0
 status: draft
