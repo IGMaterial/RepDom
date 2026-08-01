@@ -1,0 +1,24 @@
+// Ejemplo de Bundle IPS Argentino - Cumple con BundleDocAR
+Instance: BundleIPSExample
+InstanceOf: BundleDocAR
+Usage: #example
+Title: "Bundle - Documento IPS Argentino"
+Description: "Bundle conteniendo Documento IPS completo con Composición, Paciente, Organización y Profesional."
+
+* identifier.system = "http://federador.msal.gob.ar/bundle"
+* identifier.value = "BUNDLE-IPS-2025-04-001"
+
+* type = #document
+* timestamp = "2025-04-04T10:30:00Z"
+
+* entry[0].fullUrl = "Bundle/BundleIPSExample/Composition/ComposicionIPSPacienteFernandoExample"
+* entry[0].resource = ComposicionIPSPacienteFernandoExample
+
+* entry[1].fullUrl = "Bundle/BundleIPSExample/Patient/PacienteEjemploAR"
+* entry[1].resource = PacienteEjemploAR
+
+* entry[2].fullUrl = "Bundle/BundleIPSExample/Organization/HospitalJoaquinCorvalanExample"
+* entry[2].resource = HospitalJoaquinCorvalanExample
+
+* entry[3].fullUrl = "Bundle/BundleIPSExample/Practitioner/ProfesionalTubauExample"
+* entry[3].resource = ProfesionalTubauExample

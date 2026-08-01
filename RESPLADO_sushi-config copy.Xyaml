@@ -1,7 +1,10 @@
-id: msp.fhir.do
-canonical: https://digital.msp.gob.do/fhir/conectaton
-name: fhir-ig-do
- 
+id: fhir.do.core
+## msp.fhir.do ?? 
+canonical: https://digital.msp.gob.do/fhir/core
+## canonical: https://digital.msp.gob.do/fhir/conectaton  ?? 
+name: fhir-core-ig-do
+
+## name: fhir-ig-do ?? 
 
 title: "Guía FHIR DO"
 description: "Guía Conectaton Nacional de República Dominicana para recursos, extensiones, terminologías y patrones comunes de interoperabilidad FHIR."
@@ -24,6 +27,26 @@ parameters:
   show-inherited-invariants: false
   apply-contact: true
 
+# pages:
+#   index.md:
+#     title: Inicio
+#   descargas.md:
+#     title: Descargas
+#   ejemplos.md:
+#     title: Ejemplos
+#   extensiones.md:
+#     title: Extensiones
+#   flujo.md:
+#     title: Flujo de Intercambio
+#   perfiles.md:
+#     title: Perfiles
+#   seguridad.md:
+#     title: Seguridad
+#   terminologias.md:
+#     title: Terminologias
+#   validacion.md:
+#     title: Validación
+
 menu:
   Inicio: index.html
   Guía:
@@ -38,9 +61,9 @@ menu:
     Ejemplos: ejemplos.html
     Descargas: descargas.html
 
-# contact:
-#   - name: Joel Tavárez
-#     telecom:
-#       - system: email
-#         value: joel.tavarez@ministeriodesalud.gob.do
-#         use: work
+contact:
+  - name: Joel Tavárez
+    telecom:
+      - system: email
+        value: joel.tavarez@ministeriodesalud.gob.do
+        use: work

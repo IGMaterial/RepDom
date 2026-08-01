@@ -1,0 +1,18 @@
+Instance: DocumentReferenceNotaConsultaExampleAR
+InstanceOf: DocumentReferenceAR
+Usage: #example
+Title: "DocumentReference - Nota de Consulta"
+Description: "Ejemplo de referencia a documento clínico."
+
+* status = #current
+* date = "2025-03-27T10:30:00Z"
+* type.coding.system = "http://loinc.org"
+* type.coding.code = #34105-7
+* type.coding.display = "Nota de consulta"
+* subject.reference = "Patient/PacienteEjemploAR"
+* custodian.reference = "Organization/HospitalEjemploAR"
+* author.reference = "Practitioner/MedicoEjemploAR"
+* content.attachment.url = "urn:uuid:12345678-1234-1234-1234-123456789012"
+* content.attachment.contentType = "urn:ihe:pcc:xds-ms:2007"
+* masterIdentifier.system = "urn:oid:2.16.840.1.113883.4.6"
+* masterIdentifier.value = "12345678-1234-1234-1234-123456789012"

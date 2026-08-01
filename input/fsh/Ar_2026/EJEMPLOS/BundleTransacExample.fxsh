@@ -1,0 +1,41 @@
+// Ejemplo de Bundle Transaccional MHD - Cumple con BundleTransaccAR
+Instance: BundleTransaccionialExample
+InstanceOf: BundleTransaccAR
+Usage: #example
+Title: "Bundle Transaccional MHD - Envío de Documentos"
+Description: "Bundle transaccional que contiene un SubmissionSet, DocumentReference, Bundle IPS y Paciente."
+
+* type = #transaction
+* timestamp = "2025-04-04T10:30:00Z"
+
+* identifier.use = #official
+* identifier.system = "http://federador.msal.gob.ar/transaction"
+* identifier.value = "TRANS-2025-04-001"
+
+// Submission Set (List)
+* entry[0].fullUrl = "urn:uuid:1c3f3b6e-3f4e-4c5a-9e2b-1e8f0c8b9c6d"
+* entry[0].resource.resourceType = "List"
+* entry[0].resource.id = "ListSubmissionSetExample"
+* entry[0].request.method = #POST
+* entry[0].request.url = "List"
+
+// DocumentReference
+* entry[1].fullUrl = "urn:uuid:487b6713-4647-4a9a-914e-7c552d7197e9"
+* entry[1].resource.resourceType = "DocumentReference"
+* entry[1].resource.id = "DocumentReferenceIPSExample"
+* entry[1].request.method = #POST
+* entry[1].request.url = "DocumentReference"
+
+// Bundle IPS Document
+* entry[2].fullUrl = "urn:uuid:d384326c-7c0f-4ac2-ba90-a1d83e5b548f"
+* entry[2].resource.resourceType = "Bundle"
+* entry[2].resource.id = "BundleIPSExample"
+* entry[2].request.method = #POST
+* entry[2].request.url = "Bundle"
+
+// Patient
+* entry[3].fullUrl = "urn:uuid:05d3374b-0278-4d04-93f7-6adc181d5874"
+* entry[3].resource.resourceType = "Patient"
+* entry[3].resource.id = "PacienteEjemploAR"
+* entry[3].request.method = #POST
+* entry[3].request.url = "Patient"
