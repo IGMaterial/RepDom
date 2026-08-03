@@ -29,24 +29,25 @@ menu:
   Inicio: index.html
 
   BASE:
-    Resumen: base.html
+    Resumen: pendiente.html
     Paciente: StructureDefinition-PatientDO.html
     Profesional: StructureDefinition-PractitionerDO.html
     Organización: StructureDefinition-OrganizationDO.html
   INFORMACION CLINICA:
-    Resumen: clinica.html
+    Resumen: pendiente.html
     Alergias: StructureDefinition-CompositionDO.html
     Medicamentos: StructureDefinition-DocumentReferenceDO.html
     Condition: StructureDefinition-ConditionDO.html
   DOCUMENTOS:
+    Resumen: pendiente.html
     Composition: StructureDefinition-CompositionDO.html
     Documento: StructureDefinition-DocumentReferenceDO.html
   MHD: 
-    Resumen: mhd.html
+    Resumen: pendiente.html
     List: StructureDefinition-ListDO.html
     Bundle: StructureDefinition-BundleDO.html
   TERMINOLOGIAS:
-    Resumen: terminologias.html
+    Resumen: pendiente.html
     Terminologia: terminologia.html
     Códigos: codigos.html
   CONECTATON 2026:
