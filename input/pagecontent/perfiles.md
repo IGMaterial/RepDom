@@ -1,71 +1,59 @@
 # Perfiles FHIR
 
-Esta sección describe los perfiles FHIR definidos por la Guía Core FHIR República Dominicana.
+Esta página resume los perfiles activos definidos en los archivos FSH de la guía y sirve como punto de entrada para la documentación técnica del IG.
 
-Los perfiles Core establecen restricciones, cardinalidades, elementos obligatorios, extensiones y bindings terminológicos comunes que pueden ser reutilizados por guías derivadas.
-
----
-
-### Propósito
-
-Los perfiles Core permiten representar entidades comunes del ecosistema de salud nacional de manera consistente.
-
-Estos perfiles no corresponden a un único caso de uso clínico, sino que sirven como base para implementaciones nacionales, institucionales y sectoriales.
+Los perfiles incluidos aquí se han alineado con los recursos y restricciones definidos actualmente en el proyecto. La documentación se mantiene como referencia para implementadores, analistas y equipos que necesiten reutilizar los patrones de la guía Core de República Dominicana.
 
 ---
 
-### Perfiles Principales
+## Perfiles documentados
 
-| Perfil | Recurso Base | Descripción |
-|--------|--------------|-------------|
-| CorePatientDO | `Patient` | Representación base de pacientes. |
-| CorePractitionerDO | `Practitioner` | Representación base de profesionales de salud. |
-| CorePractitionerRoleDO | `PractitionerRole` | Representación de roles, especialidades y adscripciones. |
-| CoreOrganizationDO | `Organization` | Representación base de organizaciones y establecimientos. |
-| CoreLocationDO | `Location` | Representación de ubicaciones físicas. |
-| CoreConditionDO | `Condition` | Representación base de condiciones clínicas. |
-| CoreAllergyIntoleranceDO | `AllergyIntolerance` | Representación base de alergias e intolerancias. |
-| CoreMedicationDO | `Medication` | Representación base de medicamentos. |
-| CoreMedicationStatementDO | `MedicationStatement` | Representación de historial farmacológico. |
-| CoreMedicationRequestDO | `MedicationRequest` | Representación de solicitudes o prescripciones de medicamentos. |
-| CoreCompositionDO | `Composition` | Representación base de documentos clínicos. |
-
----
-
-### Reglas Generales para Perfiles
-
-Todo recurso que declare conformidad con un perfil Core debe:
-
-- Ser válido contra HL7 FHIR R4.
-- Declarar el perfil en `meta.profile`.
-- Cumplir las cardinalidades definidas.
-- Utilizar los sistemas de identificación definidos por la guía.
-- Usar las extensiones nacionales cuando correspondan.
-- Cumplir los bindings terminológicos definidos.
-- Mantener referencias resolubles hacia otros recursos.
+| Perfil | Recurso base | Descripción breve | Página de detalle |
+|--------|--------------|------------------|-------------------|
+| PatientDO | Patient | Perfil para pacientes con identificadores, nombre y dirección. | [PatientDO](perfil-patient.html) |
+| PractitionerDO | Practitioner | Perfil para profesionales de salud con datos de identificación y especialidad. | [PractitionerDO](perfil-practitioner.html) |
+| OrganizationDO | Organization | Perfil para establecimientos y unidades organizacionales. | [OrganizationDO](perfil-organization.html) |
+| ConditionDO | Condition | Perfil para condiciones clínicas y diagnósticos. | [ConditionDO](perfil-condition.html) |
+| AllergyIntoleranceDO | AllergyIntolerance | Perfil para alergias, intolerancias y reacciones adversas. | [AllergyIntoleranceDO](perfil-allergyintolerance.html) |
+| CompositionDO | Composition | Perfil para documentos clínicos tipo IPS. | [CompositionDO](perfil-composition.html) |
+| BundleDocDO | Bundle | Perfil para bundles documentales con recursos de composición y pacientes. | [BundleDocDO](perfil-bundle-doc.html) |
+| BundleTransaccDO | Bundle | Perfil para bundles transaccionales basados en MHD. | [BundleTransaccDO](perfil-bundle-transaccional.html) |
+| DocumentReferenceDO | DocumentReference | Perfil para referencias a documentos con metadatos y contenido. | [DocumentReferenceDO](perfil-documentreference.html) |
+| ListDO | List | Perfil para listas de entrada de documentos en flujos MHD. | [ListDO](perfil-list.html) |
 
 ---
 
-### Declaración de Perfil
+## Principios generales
 
-```json
-{
-  "resourceType": "Patient",
-  "meta": {
-    "profile": [
-      "http://digital.msp.gob.do/fhir/core/StructureDefinition/CorePatientDO"
-    ]
-  }
-}
-```
+Los perfiles de esta guía se orientan a:
+
+- favorecer la interoperabilidad con HL7 FHIR R4 y con las especificaciones IPS y MHD cuando aplica;
+- mantener restricciones comunes para la representación de pacientes, profesionales, organizaciones, condiciones clínicas y documentos;
+- reutilizar extensiones y terminologías nacionales cuando corresponda;
+- facilitar la implementación de casos de uso de salud en República Dominicana.
 
 ---
 
-### Relación con Guías Derivadas
+## Notas de implementación
 
-| Guía Derivada | Uso de Core |
-|--------------|-------------|
-| IPS | Reutiliza pacientes, organizaciones, condiciones, alergias y medicamentos. |
-| Receta Electrónica | Reutiliza pacientes, profesionales, organizaciones y medicamentos. |
-| Laboratorio | Reutiliza pacientes, organizaciones, observaciones y reportes diagnósticos. |
-| Registro de Cáncer | Reutiliza pacientes, organizaciones, condiciones y observaciones. |
+Para utilizar un perfil de esta guía, se recomienda:
+
+- declarar el perfil en el recurso correspondiente mediante meta.profile;
+- conservar las cardinalidades y restricciones definidas en el perfil;
+- emplear los recursos relacionados de forma coherente, por ejemplo PatientDO con ConditionDO o AllergyIntoleranceDO;
+- validar la instancia con el conjunto de reglas del IG antes de publicar o intercambiar información.
+
+---
+
+## Páginas detalladas
+
+- [Perfil PatientDO](perfil-patient.html)
+- [Perfil PractitionerDO](perfil-practitioner.html)
+- [Perfil OrganizationDO](perfil-organization.html)
+- [Perfil ConditionDO](perfil-condition.html)
+- [Perfil AllergyIntoleranceDO](perfil-allergyintolerance.html)
+- [Perfil CompositionDO](perfil-composition.html)
+- [Perfil BundleDocDO](perfil-bundle-doc.html)
+- [Perfil BundleTransaccDO](perfil-bundle-transaccional.html)
+- [Perfil DocumentReferenceDO](perfil-documentreference.html)
+- [Perfil ListDO](perfil-list.html)

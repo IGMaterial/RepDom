@@ -1,5 +1,5 @@
 CodeSystem: CSTipoIdentificacionDO
-Id: tipo-identificacion-do
+Id: CSTipoIdentificacionDO
 Title: "Tipo de Identificación DO"
 Description: "Tipos de documentos de identificación usados en República Dominicana o por la implementación nacional."
 * ^url = "https://digital.msp.gob.do/fhir/core/CodeSystem/tipo-identificacion-do"
@@ -23,6 +23,9 @@ Description:  "Conjunto de valores para los Identificadores de Paciente."
 
 * $CSIdentificadoresPersona#CED "Cédula de Identidad" 
 * $CSIdentificadoresPersona#PAS "Pasaporte"
+* $CSIdentificadoresPersona#NSS "Número de Seguridad Social" 
+* $CSIdentificadoresPersona#RN "Registro Nacional" 
+* $CSIdentificadoresPersona#MR "Record médico"
 
 ValueSet: VSTipoIdentifProfDO
 Id: VSTipoIdentifProfDO
@@ -32,6 +35,7 @@ Description:  "Conjunto de valores para los Identificadores de Profesional."
 //* ^version = "1.0.0"
 * ^status = #active
 
+* $CSIdentificadoresPersona#EX "Exequátur"
 /*
 
 CodeSystem: IdentificadoresPersonaCS

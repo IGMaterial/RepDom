@@ -1,10 +1,8 @@
 
 Profile: BundleDocDO
 Parent: $Bundle-uv-ips
-
+//Parent: Bundle
 Id: BundleDocDO
-// Title: "Bundle IPS Argentina"
-// Description: "Estructura de Documentos y recursos relacionados."
 
 /*   --------- Compostion ---------*/
 * entry[composition] ^short = "Composition."
@@ -12,7 +10,7 @@ Id: BundleDocDO
 
 * entry[composition].resource 1..
 
-* entry[composition].resource only  $canonicaComposition
+* entry[composition].resource only  $canonicaCompositionDo
 
 
 /* --------- PACIENTE ---------*/
@@ -20,7 +18,7 @@ Id: BundleDocDO
 * entry[patient] ^definition = "Paciente."
 
 * entry[patient].resource 1..
-* entry[patient].resource only $canonicaPatientDO
+* entry[patient].resource only  $canonicaPatientDO
 
 
 /* --------- ORGANIZATION ---------*/
@@ -28,14 +26,14 @@ Id: BundleDocDO
 * entry[organization] ^definition = "Establecimiento de Salud."
 
 * entry[organization].resource 1..1
-* entry[organization].resource only $canonicaOrganizationAREstablecimiento 
+* entry[organization].resource only $canonicaOrganizationDo
 
 /* --------- PROFESIONAL ---------*/
 * entry[practitioner] ^short = "Profesional"
 * entry[practitioner] ^definition = "Profesional."
 
 * entry[practitioner].resource 1..1
-* entry[practitioner].resource only $canonicaPractitionerAR
+* entry[practitioner].resource only $canonicaPractitionerDo
 
 
 /**************Profile: IPSBundleDO

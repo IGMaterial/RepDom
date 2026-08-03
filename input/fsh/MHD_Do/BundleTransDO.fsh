@@ -4,7 +4,7 @@ Id: BundleTransaccAR
 
 * entry[Patient] 1..1
 * entry[Patient].resource 1..1
-* entry[Patient].resource only PacienteDO
+* entry[Patient].resource only PatientDO
 
 * entry[DocumentRefs] 1..1
 * entry[DocumentRefs].resource 1..1

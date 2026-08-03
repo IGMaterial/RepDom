@@ -1,6 +1,7 @@
 Profile: PatientDO
-Parent: Patient
-Id: patient-do
+Parent: $Patient-uv-ips
+//Parent: Patient
+//Id: patient-do
 Title: "Paciente DO"
 Description: "Perfil para representar pacientes."
 
@@ -9,7 +10,7 @@ Description: "Perfil para representar pacientes."
 * identifier.system 1..1 MS
 * identifier.value 1..1 MS
 * identifier.type 0..1 MS
-* identifier.type from TipoIdentificacionDOVS (extensible)
+* identifier.type from VSTipoIdentifPacDO //(extensible)
 
 * name 1..* MS
 * name.given 1..* MS
@@ -18,7 +19,7 @@ Description: "Perfil para representar pacientes."
 
 * gender 0..1 MS
 
-* birthDate 0..1 MS
+//* birthDate 0..1 MS
 
 * telecom 0..* MS
 

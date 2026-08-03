@@ -2,7 +2,7 @@ Profile:        ListDO
 Parent: https://profiles.ihe.net/ITI/MHD/StructureDefinition/IHE.MHD.Minimal.SubmissionSet
 
 
-* subject only Reference(PacienteDO)
+* subject only Reference(PatientDO)
 * entry.item only Reference(DocumentReferenceDO)
 
 /***************************************************************

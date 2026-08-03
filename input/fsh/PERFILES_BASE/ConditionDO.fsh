@@ -28,3 +28,10 @@ Description: "Perfil  para problemas, diagnósticos y condiciones clínicas."
 
 
 //* ^url = "https://digital.msp.gob.do/fhir/core/StructureDefinition/core-condition-do"
+
+
+ValueSet: CondicionesClinicasDOVS
+Id: condiciones-clinicas-do-vs
+Title: "Condiciones Clínicas DO"
+Description: "ValueSet preferido para condiciones clínicas. Inicialmente basado en SNOMED CT; puede complementarse con terminología nacional."
+* include codes from system $SCT where concept is-a #404684003

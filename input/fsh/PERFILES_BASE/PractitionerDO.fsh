@@ -1,6 +1,6 @@
 Profile: PractitionerDO
-Parent: Practitioner
-Id: practitioner-do
+Parent: Practitioner-uv-ips
+//Id: practitioner-do
 Title: "Profesional DO"
 Description: "Perfil para profesionales de salud."
 
@@ -8,7 +8,8 @@ Description: "Perfil para profesionales de salud."
 * identifier.system 1..1 MS
 * identifier.value 1..1 MS
 * identifier.type 0..1 MS
-* identifier.type from TipoIdentificacionDOVS (extensible)
+//* identifier.type from TipoIdentificacionDOVS (extensible)
+* identifier.type from VSTipoIdentifProfDO
 
 * name 1..* MS
 * name.given 1..* MS

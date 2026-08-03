@@ -23,7 +23,9 @@ Description: "Perfil para alergias, intolerancias y reacciones adversas."
 * recordedDate 0..1 MS
 * recorder 0..1 MS
 
-* recorder only Reference(PractitionerDO or PractitionerRoleDO)
+//* recorder only Reference(PractitionerDO or PractitionerRoleDO)
+
+* recorder only Reference(PractitionerDO)
 * reaction 0..* MS
 * reaction.manifestation 1..* MS
 * reaction.severity 0..1 MS

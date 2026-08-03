@@ -1,7 +1,7 @@
 {
   "resourceType" : "Requirements",
   "id" : "fromNarrative",
-  "url" : "https://digital.msp.gob.do/fhir/core/Requirements/fromNarrative",
+  "url" : "https://digital.msp.gob.do/fhir/conectaton/Requirements/fromNarrative",
   "name" : "FromNarrative",
   "title" : "Narrative Conformance Statements",
   "status" : "active",

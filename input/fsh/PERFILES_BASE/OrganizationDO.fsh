@@ -1,5 +1,5 @@
 Profile: OrganizationDO
-Parent: Organization
+Parent: http://hl7.org/fhir/uv/ips/StructureDefinition/Organization-uv-ips
 //Id: organization-do
 Title: "Organización DO"
 Description: "Perfil para establecimientos, instituciones y unidades organizacionales de salud."
@@ -12,7 +12,7 @@ Description: "Perfil para establecimientos, instituciones y unidades organizacio
 * active 0..1 MS
 
 * type 0..* MS
-* type from TipoEstablecimientoDOVS (extensible)
+//* type from TipoEstablecimientoDOVS (extensible)
 
 * name 1..1 MS
 

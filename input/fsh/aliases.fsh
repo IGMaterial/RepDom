@@ -12,6 +12,18 @@ Alias: $request-intent = http://hl7.org/fhir/request-intent
 Alias: $bundle-type = http://hl7.org/fhir/bundle-type
 Alias: $composition-status = http://hl7.org/fhir/composition-status
 
+/********************************/
+Alias: $CSIdentificadoresPersona = https://digital.msp.gob.do/fhir/conectaton/CodeSystem/CSIdentificadoresPersona
+Alias: $canonicaCompositionDo = https://digital.msp.gob.do/fhir/conectaton/StructureDefinition/CompositionDO
+//Alias: $canonicaPatientDO = https://digital.msp.gob.do/fhir/StructureDefinition/PatientDO
+//https://digital.msp.gob.do/fhir/conectaton
+//
+
+Alias: $canonicaPatientDO = https://digital.msp.gob.do/fhir/conectaton/StructureDefinition/PatientDO
+
+Alias: $canonicaOrganizationDo = https://digital.msp.gob.do/fhir/conectaton/StructureDefinition/OrganizationDO
+Alias: $canonicaPractitionerDo = https://digital.msp.gob.do/fhir/conectaton/StructureDefinition/PractitionerDO
+/**********************************/
 
 Alias: $Core = https://digital.msp.gob.do/fhir/core/StructureDefinition
 Alias: $CorePacienteDO = https://digital.msp.gob.do/fhir/core/StructureDefinition/core-patient-do
@@ -39,11 +51,5 @@ Alias: $consentscope = http://terminology.hl7.org/CodeSystem/consentscope
 Alias: $standardterms = http://standardterms.edqm.eu
 Alias: $v2-0203 = http://terminology.hl7.org/CodeSystem/v2-0203
 Alias: $Bundle-uv-ips = http://hl7.org/fhir/uv/ips/StructureDefinition/Bundle-uv-ips
+Alias: $Patient-uv-ips = http://hl7.org/fhir/uv/ips/StructureDefinition/Patient-uv-ips
 
-
-/*********/
-Alias: $canonicaComposition = https://conectaton.msal.gob.ar/StructureDefinition/CompositionAR
-Alias: $canonicaPatientAr = https://conectaton.msal.gob.ar/StructureDefinition/PacienteAR
-Alias: $canonicaOrganizationAREstablecimiento = https://conectaton.msal.gob.ar/StructureDefinition/OrganizationAREstablecimiento
-Alias: $canonicaPractitionerAR = https://conectaton.msal.gob.ar/StructureDefinition/PractitionerAR
-Alias: $canonicaOrganizationARDominio = https://conectaton.msal.gob.ar/StructureDefinition/OrganizationARDominio

@@ -1,8 +1,6 @@
 id: msp.fhir.do
 canonical: https://digital.msp.gob.do/fhir/conectaton
 name: fhir-ig-do
- 
-
 title: "Guía FHIR DO"
 description: "Guía Conectaton Nacional de República Dominicana para recursos, extensiones, terminologías y patrones comunes de interoperabilidad FHIR."
 language: es
@@ -19,24 +17,56 @@ publisher:
 
 dependencies:
   hl7.fhir.uv.ips: 2.0.0-ballot
+  ihe.iti.mhd: 4.2.2
 
 parameters:
   show-inherited-invariants: false
   apply-contact: true
+  excludettl: true
+  excludemap: true
 
 menu:
   Inicio: index.html
-  Guía:
+
+  BASE:
+    Resumen: base.html
+    Paciente: StructureDefinition-PatientDO.html
+    Profesional: StructureDefinition-PractitionerDO.html
+    Organización: StructureDefinition-OrganizationDO.html
+  INFORMACION CLINICA:
+    Resumen: clinica.html
+    Alergias: StructureDefinition-CompositionDO.html
+    Medicamentos: StructureDefinition-DocumentReferenceDO.html
+    Condition: StructureDefinition-ConditionDO.html
+  DOCUMENTOS:
+    Composition: StructureDefinition-CompositionDO.html
+    Documento: StructureDefinition-DocumentReferenceDO.html
+  MHD: 
+    Resumen: mhd.html
+    List: StructureDefinition-ListDO.html
+    Bundle: StructureDefinition-BundleDO.html
+  TERMINOLOGIAS:
+    Resumen: terminologias.html
+    Terminologia: terminologia.html
+    Códigos: codigos.html
+  CONECTATON 2026:
+    Resumen: conectaton.html
+    Flujo de Intercambio: flujo-conectaton.html
+    Seguridad: seguridad-conectaton.html
+    Validación: validacion-conectaton.html
+    Comunicacion: comunicacion.html
+  OTROS:
     Flujo de Intercambio: flujo.html
     Seguridad: seguridad.html
     Validación: validacion.html
-  Artefactos:
     Resumen: artifacts.html
     Perfiles: perfiles.html
     Extensiones: extensiones.html
     Terminologías: terminologias.html
     Ejemplos: ejemplos.html
     Descargas: descargas.html
+
+
 
 # contact:
 #   - name: Joel Tavárez

@@ -1,5 +1,9 @@
-Profile: DocumentReferenceIndiceAR
+Profile: DocumentReferenceDO
 Parent: https://profiles.ihe.net/ITI/MHD/StructureDefinition/IHE.MHD.Minimal.DocumentReference
+
+/* Title: "Documento Refencia Origen"
+Description: "Documento Refencia Origen." */
+
 
 * type 1.. MS
 
@@ -19,25 +23,22 @@ Parent: https://profiles.ihe.net/ITI/MHD/StructureDefinition/IHE.MHD.Minimal.Doc
 * subject ^short = "Representa al paciente."
 
 * subject.reference 1..
-* subject.reference ^short = "URL que referencia al recurso paciente."
-* subject only Reference(PacienteAR)
+* subject.reference ^short = "Referencia al paciente."
+* subject only Reference(PatientDO)
 
 
 //-----------CUSTODIAN ---------
-* custodian ^short = "Nodo que custodia el documento."
+* custodian ^short = "Nodo Dominio que custodia el documento."
 
-* custodian.reference ..0
-* custodian.identifier 1.. MS
-* custodian.identifier ^short = "Identificador del Nodo que custodia el documento."
-* custodian.identifier.system = "http://federador.msal.gob.ar/uri"
-* custodian.identifier.value 1.. MS
+* custodian.reference ^short = "URL que referencia al recurso organización."
+* custodian only Reference(OrganizationDO)
 
 
 //-----------Contenido : Composition ---------
 * content.attachment MS
 * content.attachment ^short = ""
 * content.attachment.url 1..1 MS
-* content.attachment.url ^short = "URL del documento almacenado en el nodo."
+* content.attachment.url ^short = "URL del documento almacenado."
 
 
 /**********************************************************************/
