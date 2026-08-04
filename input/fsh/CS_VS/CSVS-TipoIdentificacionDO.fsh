@@ -35,39 +35,13 @@ Description:  "Conjunto de valores para los Identificadores de Profesional."
 //* ^version = "1.0.0"
 * ^status = #active
 
+* $CSIdentificadoresPersona#CED "Cédula de Identidad" 
+* $CSIdentificadoresPersona#PAS "Pasaporte"
 * $CSIdentificadoresPersona#EX "Exequátur"
-/*
-
-CodeSystem: IdentificadoresPersonaCS
-Id: IdentificadoresPersonaCS
-Title: "Identificadores de Persona"
-Description: "Conjunto de códigos para identificar a una persona."
-* ^name = "IdentificadoresPersonaCS"
-* ^experimental = false
-* ^caseSensitive = true
-* #01   "Cédula de Identidad" "Cédula de Identidad"
-* #02   "Cédula Extranjera" "Cédula Extranjera"
-* #03   "Pasaporte" "Pasaporte"
 
 
-
-ValueSet: IdentificadoresPersonaVS
-Id: IdentificadoresPersonaVS
-Title: "Identificadores de Persona"
-Description:  "Conjunto de valores para los Identificadores de Persona."
-* ^experimental = false
-* ^version = "1.0.0"
-* ^status = #active
-
-* include codes from system IdentificadoresPersonaCS
-
-ValueSet: IdentificadoresProfesionalVS
-Title: "Identificadores de Profesional"
-Description:  "Conjunto de valores para los Identificadores de Profesional."
-* ^experimental = false
-* ^version = "1.0.0"
-* ^status = #active
-
-* $CSIdentificadoresPersona#01 "Cédula de Identidad" 
-
-*/
+ValueSet: MedicamentosDOVS
+Id: medicamentos-do-vs
+Title: "Medicamentos DO"
+Description: "ValueSet para medicamentos. Debe sustituirse o complementarse con catálogo nacional de medicamentos."
+* include codes from system $ATC

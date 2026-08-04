@@ -27,7 +27,6 @@ parameters:
 
 menu:
   Inicio: index.html
-
   BASE:
     Resumen: pendiente.html
     Paciente: StructureDefinition-PatientDO.html
@@ -35,8 +34,8 @@ menu:
     Organización: StructureDefinition-OrganizationDO.html
   INFORMACION CLINICA:
     Resumen: pendiente.html
-    Alergias: StructureDefinition-CompositionDO.html
-    Medicamentos: StructureDefinition-DocumentReferenceDO.html
+    Alergias: StructureDefinition-AllergyIntoleranceDO.html
+    Medicamentos: StructureDefinition-MedicationStatementDO.html
     Condition: StructureDefinition-ConditionDO.html
   DOCUMENTOS:
     Resumen: pendiente.html
@@ -49,7 +48,7 @@ menu:
   TERMINOLOGIAS:
     Resumen: pendiente.html
     Terminologia: terminologia.html
-    Códigos: codigos.html
+    Codigos: codigos.html
   CONECTATON 2026:
     Resumen: conectaton.html
     Flujo de Intercambio: flujo-conectaton.html

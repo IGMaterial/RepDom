@@ -1,6 +1,8 @@
+
+Alias: $condition-uv-ips = http://hl7.org/fhir/uv/ips/StructureDefinition/Condition-uv-ips
+
 Profile: ConditionDO
-Parent: Condition
-Id: condition-do
+Parent: $condition-uv-ips
 Title: "Condición DO"
 Description: "Perfil  para problemas, diagnósticos y condiciones clínicas."
 
@@ -10,8 +12,8 @@ Description: "Perfil  para problemas, diagnósticos y condiciones clínicas."
 * category 0..* MS
 * severity 0..1 MS
 
-* code 1..1 MS
-* code from CondicionesClinicasDOVS (extensible)
+/** code 1..1 MS
+* code from CondicionesClinicasDOVS (extensible)*/
 
 * subject 1..1 MS
 * subject only Reference(PatientDO)
@@ -29,9 +31,10 @@ Description: "Perfil  para problemas, diagnósticos y condiciones clínicas."
 
 //* ^url = "https://digital.msp.gob.do/fhir/core/StructureDefinition/core-condition-do"
 
-
+/*
 ValueSet: CondicionesClinicasDOVS
 Id: condiciones-clinicas-do-vs
 Title: "Condiciones Clínicas DO"
 Description: "ValueSet preferido para condiciones clínicas. Inicialmente basado en SNOMED CT; puede complementarse con terminología nacional."
 * include codes from system $SCT where concept is-a #404684003
+*/
