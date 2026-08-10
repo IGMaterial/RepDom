@@ -21,9 +21,8 @@ Description: "Perfil para documentos clínicos FHIR."
 
 * custodian 0..1 MS
 * custodian only Reference(OrganizationDO)
+
 //* section 0..* MS
-
-
 
 /*
 

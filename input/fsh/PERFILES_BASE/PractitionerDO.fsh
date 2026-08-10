@@ -8,8 +8,7 @@ Description: "Perfil para profesionales de salud."
 * identifier.system 1..1 MS
 * identifier.value 1..1 MS
 * identifier.type 0..1 MS
-//* identifier.type from TipoIdentificacionDOVS (extensible)
-* identifier.type from VSTipoIdentifProfDO
+* identifier.type from VSTipoIdentifProfDO (required)
 
 * name 1..* MS
 * name.given 1..* MS
@@ -21,7 +20,8 @@ Description: "Perfil para profesionales de salud."
 
 * qualification 0..* MS
 * qualification.identifier 0..* MS
-* qualification.code 1..1 MS
+//* qualification.code 0..1 MS
+* qualification.code from VSEspecialidadDO (required)
 
 
 //* ^url = "https://digital.msp.gob.do/fhir/core/StructureDefinition/core-practitioner-do"
