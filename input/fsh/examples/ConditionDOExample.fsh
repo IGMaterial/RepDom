@@ -14,8 +14,8 @@ Description: "Ejemplo para una condición clínica del paciente."
 * code.coding.system = "http://snomed.info/sct"
 * code.coding.code = #404684003
 * code.coding.display = "Clinical finding"
-* subject = Reference(PatientDO/PatientEjemplo)
+* subject = Reference(PatientDO/PatientDOExample)
 * onsetDateTime = "2026-08-10"
 * recordedDate = "2026-08-10"
-* recorder = Reference(PractitionerDO/PractitionerEjemplo)
+* recorder = Reference(PractitionerDO/PractitionerDOExample)
 * note[0].text = "Paciente con diagnóstico registrado en consulta."

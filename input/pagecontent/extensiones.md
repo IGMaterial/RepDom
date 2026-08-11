@@ -36,10 +36,15 @@ Toda extensión definida en esta guía debe tener URL canónica estable, definic
 ```json
 {
   "resourceType": "Patient",
-  "extension": [
+  "name": [
     {
-      "url": "http://digital.msp.gob.do.gob.do/fhir/core/StructureDefinition/SegundoApellidoDO",
-      "valueString": "García"
+      "family": "Pérez",
+      "extension": [
+        {
+          "url": "https://digital.msp.gob.do/fhir/conectaton/StructureDefinition/SegundoApellidoDO",
+          "valueString": "García"
+        }
+      ]
     }
   ]
 }

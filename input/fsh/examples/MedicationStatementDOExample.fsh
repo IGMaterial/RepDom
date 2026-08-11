@@ -9,9 +9,9 @@ Description: "Ejemplo de historial farmacológico del paciente."
 * medicationCodeableConcept.coding.system = "http://www.nlm.nih.gov/research/umls/rxnorm"
 * medicationCodeableConcept.coding.code = #1049630
 * medicationCodeableConcept.coding.display = "Amoxicillin 500 mg"
-* subject = Reference(PatientDO/PatientEjemplo)
+* subject = Reference(PatientDO/PatientDOExample)
 * dateAsserted = "2026-08-10"
-* informationSource = Reference(PractitionerDO/PractitionerEjemplo)
+* informationSource = Reference(PractitionerDO/PractitionerDOExample)
 * dosage[0].text = "Tomar una cápsula cada 8 horas durante 7 días."
 * dosage[0].route.coding.system = "http://terminology.hl7.org/CodeSystem/route-codes"
 * dosage[0].route.coding.code = #PO

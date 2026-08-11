@@ -28,7 +28,7 @@ Todo recurso que implemente esta guía debe declarar su perfil en `meta.profile`
   "resourceType": "Patient",
   "meta": {
     "profile": [
-      "http://digital.msp.gob.do/fhir/core/StructureDefinition/CorePatientDO"
+      "https://digital.msp.gob.do/fhir/conectaton/StructureDefinition/PatientDO"
     ]
   }
 }

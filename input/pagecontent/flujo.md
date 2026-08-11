@@ -38,7 +38,7 @@ Los recursos intercambiados deben declarar el perfil correspondiente mediante `m
   "resourceType": "Patient",
   "meta": {
     "profile": [
-      "http://digital.msp.gob.do/fhir/core/StructureDefinition/CorePatientDO"
+      "https://digital.msp.gob.do/fhir/conectaton/StructureDefinition/PatientDO"
     ]
   }
 }

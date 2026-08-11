@@ -4,14 +4,14 @@ Usage: #example
 Title: "Ejemplo de PatientDO"
 Description: "Ejemplo de paciente DO con identificador, nombre, género y datos de contacto."
 
-//* identifier[0].system = "https://digital.msp.gob.do/identifiers/patient"
-* identifier[0].value = "PAC-0001"
+* identifier[0].system = "https://digital.msp.gob.do/fhir/sid/cedula"
+* identifier[0].value = "00000000000"
 * identifier[0].type.coding.system = "https://digital.msp.gob.do/fhir/conectaton/CodeSystem/CSIdentificadoresPersona"
-* identifier[0].type.coding.code = #MR
+* identifier[0].type.coding.code = #CED
 
 * name[0].family = "Pérez"
 * name[0].given[0] = "María"
-* name[0].extension[0].url = "http://digital.msp.gob.do/fhir/StructureDefinition/SegundoApellidoDO"
+* name[0].extension[0].url = "https://digital.msp.gob.do/fhir/conectaton/StructureDefinition/SegundoApellidoDO"
 * name[0].extension[0].valueString = "Gómez"
 
 * birthDate = "1990-05-15"

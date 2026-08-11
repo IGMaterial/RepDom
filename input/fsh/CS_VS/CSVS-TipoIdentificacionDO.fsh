@@ -2,7 +2,7 @@ CodeSystem: CSTipoIdentificacionDO
 Id: CSTipoIdentificacionDO
 Title: "Tipo de Identificación DO"
 Description: "Tipos de documentos de identificación usados en República Dominicana o por la implementación nacional."
-* ^url = "https://digital.msp.gob.do/fhir/core/CodeSystem/tipo-identificacion-do"
+* ^url = "https://digital.msp.gob.do/fhir/conectaton/CodeSystem/CSIdentificadoresPersona"
 * ^caseSensitive = true
 * ^content = #complete
 * #CED "Cédula" "Cédula de identidad y electoral."

@@ -57,7 +57,7 @@ Las terminologías permiten asegurar que los datos intercambiados tengan signifi
 {
   "coding": [
     {
-      "system": "http://digital.msp.gob.do/fhir/core/CodeSystem/tipo-identificacion-do",
+      "system": "https://digital.msp.gob.do/fhir/conectaton/CodeSystem/CSIdentificadoresPersona",
       "code": "CED",
       "display": "Cédula"
     }

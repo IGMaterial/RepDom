@@ -39,19 +39,21 @@ Los ejemplos tienen como objetivo ilustrar el uso correcto de los perfiles, exte
   "id": "paciente-ejemplo",
   "meta": {
     "profile": [
-      "http://digital.msp.gob.do/fhir/core/StructureDefinition/CorePatientDO"
+      "https://digital.msp.gob.do/fhir/conectaton/StructureDefinition/PatientDO"
     ]
   },
-  "extension": [
-    {
-      "url": "http://digital.msp.gob.do.gob.do/fhir/core/StructureDefinition/SegundoApellidoDO",
-      "valueString": "García"
-    }
-  ],  
   "identifier": [
     {
-      "system": "http://digital.msp.gob.do/fhir/sid/cedula",
-      "value": "03105354985"
+      "system": "https://digital.msp.gob.do/fhir/sid/cedula",
+      "type": {
+        "coding": [
+          {
+            "system": "https://digital.msp.gob.do/fhir/conectaton/CodeSystem/CSIdentificadoresPersona",
+            "code": "CED"
+          }
+        ]
+      },
+      "value": "00000000000"
     }
   ],
   "name": [
@@ -59,6 +61,12 @@ Los ejemplos tienen como objetivo ilustrar el uso correcto de los perfiles, exte
       "family": "Pérez",
       "given": [
         "María"
+      ],
+      "extension": [
+        {
+          "url": "https://digital.msp.gob.do/fhir/conectaton/StructureDefinition/SegundoApellidoDO",
+          "valueString": "García"
+        }
       ]
     }
   ],
