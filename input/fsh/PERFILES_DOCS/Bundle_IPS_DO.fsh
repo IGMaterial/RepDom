@@ -1,7 +1,6 @@
 
 Profile: BundleDocDO
 Parent: $Bundle-uv-ips
-//Parent: Bundle
 Id: BundleDocDO
 
 /*   --------- Compostion ---------*/

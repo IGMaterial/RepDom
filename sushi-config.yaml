@@ -23,6 +23,7 @@ parameters:
   show-inherited-invariants: false
   apply-contact: true
   excludettl: true
+  excludexml: true
   excludemap: true
 
 menu:
@@ -40,21 +41,17 @@ menu:
   DOCUMENTOS:
     -Resumen: pendiente.html
     Composition: StructureDefinition-CompositionDO.html
-    Documento: StructureDefinition-DocumentReferenceDO.html
+    Bundle: StructureDefinition-BundleDO.html
   MHD: 
     -Resumen: pendiente.html
     List: StructureDefinition-ListDO.html
-    Bundle: StructureDefinition-BundleDO.html
+    Documento: StructureDefinition-DocumentReferenceDO.html    
   TERMINOLOGIAS:
     -Resumen: pendiente.html
     Terminologia: terminologia.html
     Codigos: codigos.html
   CONECTATON 2026:
     Detalles: conectaton.html
-    Flujo de Intercambio: flujo-conectaton.html
-    Seguridad: seguridad-conectaton.html
-    Validación: validacion-conectaton.html
-    Comunicacion: comunicacion.html
   OTROS:
     Flujo de Intercambio: flujo.html
     Seguridad: seguridad.html

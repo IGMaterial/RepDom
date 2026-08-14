@@ -1,12 +1,12 @@
 
 Profile: BundleDocDO - BundleDocNotif?
-Parent: $Bundle-uv-ips
+Parent: Bundle
 
-Id: BundleDocAR
 // Title: "Bundle IPS Argentina"
 // Description: "Estructura de Documentos y recursos relacionados."
 
 /*   --------- Compostion ---------*/
+* type = document
 * entry[composition] ^short = "Composition."
 * entry[composition] ^definition = "Composition"
 
