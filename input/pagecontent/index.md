@@ -1,186 +1,477 @@
-# Guía Core FHIR República Dominicana
+# Guía de Implementación FHIR — Conectatón República Dominicana 2026
 
-Bienvenido a la **Guía de Implementación Core FHIR de la República Dominicana**. Esta guía tiene como objetivo establecer una base común para la representación, validación e intercambio de información de salud utilizando el estándar HL7® FHIR®, facilitando la interoperabilidad entre instituciones públicas, privadas, sistemas nacionales, prestadores de servicios de salud, laboratorios, farmacias, aseguradoras y plataformas de salud digital.
+La presente **Guía de Implementación FHIR** establece las especificaciones técnicas que utilizarán los equipos participantes en la **Primera Conectatón Nacional de Interoperabilidad en Salud de la República Dominicana 2026**.
 
-La Guía Core define los perfiles, extensiones, identificadores, terminologías y reglas comunes que deben ser reutilizados por otras guías de implementación nacionales o sectoriales, tales como IPS, registro de cáncer, receta electrónica, vigilancia epidemiológica, resultados de laboratorio, referencia y contrarreferencia, entre otras.
+Su propósito es proporcionar una base común para la preparación, implementación y validación de los intercambios de información que serán probados durante la Conectatón, utilizando **HL7® FHIR® R4** y los perfiles, terminologías, reglas de validación y mecanismos de intercambio definidos para cada escenario.
 
----
+La guía está dirigida principalmente a los equipos técnicos de las instituciones participantes y a sus proveedores o responsables de sistemas de información.
 
-### Caso de Uso
-
-Esta guía responde al caso de uso de **normalización nacional de datos clínicos, administrativos y demográficos en FHIR**. Su propósito es ofrecer un conjunto base de artefactos interoperables que permitan representar de manera consistente pacientes, profesionales, organizaciones, establecimientos, ubicaciones, condiciones clínicas, alergias, medicamentos, observaciones y documentos clínicos.
-
-**Objetivos principales:**
-
-- Definir perfiles FHIR reutilizables para el ecosistema nacional de salud digital.
-- Estandarizar la identificación de pacientes, profesionales, organizaciones y establecimientos.
-- Establecer extensiones nacionales para datos que no están cubiertos directamente por FHIR base.
-- Definir sistemas de codificación, ValueSets y CodeSystems nacionales.
-- Facilitar la construcción de guías derivadas y casos de uso específicos.
-- Promover validaciones sintácticas, estructurales y semánticas.
-- Reducir duplicidad e inconsistencias mediante identificadores normalizados.
-- Servir como base para implementaciones FHIR nacionales, institucionales y sectoriales.
+A través de sus diferentes secciones se especifica **qué información deberá ser capaz de generar o consumir cada sistema, cómo deberá representarse utilizando FHIR y cuáles serán las condiciones que deberán cumplirse para completar satisfactoriamente las pruebas**.
 
 ---
 
-### Alcance
+## Objetivo de la guía
 
-Esta implementación cubre los siguientes aspectos:
+La Conectatón busca comprobar que sistemas desarrollados y operados por organizaciones diferentes puedan **intercambiar información utilizando una interpretación común de los estándares**.
 
-- Representación base de pacientes mediante el recurso `Patient`.
-- Representación de profesionales de salud mediante `Practitioner`.
-- Representación de roles, especialidades y adscripciones mediante `PractitionerRole`.
-- Representación de organizaciones, establecimientos y entidades de salud mediante `Organization`.
-- Representación de ubicaciones físicas mediante `Location`.
-- Representación de condiciones clínicas mediante `Condition`.
-- Representación de alergias e intolerancias mediante `AllergyIntolerance`.
-- Representación base de medicamentos mediante `Medication`.
-- Representación de historial farmacológico mediante `MedicationStatement`.
-- Representación de solicitudes o prescripciones mediante `MedicationRequest`.
-- Representación de documentos clínicos mediante `Composition` y `Bundle`.
-- Definición de extensiones nacionales.
-- Definición de terminologías nacionales base.
-- Consideraciones generales de seguridad, privacidad y trazabilidad.
+Por esta razón, esta guía funciona como el **contrato técnico común de la Conectatón**.
+
+Los participantes podrán utilizar sus propios sistemas, arquitecturas, lenguajes de programación, servidores FHIR y herramientas de integración. La Conectatón no evalúa la tecnología utilizada internamente por cada institución, sino la capacidad de sus soluciones para:
+
+- generar información conforme a las especificaciones definidas;
+- intercambiarla utilizando los mecanismos establecidos;
+- recibir información proveniente de otros participantes;
+- interpretar correctamente la información recibida; y
+- completar los escenarios de interoperabilidad definidos para el ejercicio.
 
 ---
 
-### Fuera de Alcance
+## Alcance
 
-Esta guía no define reglas clínicas específicas para programas particulares. Los casos de uso especializados deberán definirse en guías derivadas.
+Esta versión de la guía contiene los artefactos comunes y las especificaciones necesarias para implementar y probar los escenarios definidos para la Conectatón 2026.
 
-Ejemplos de guías derivadas:
+Incluye:
 
-- Guía IPS nacional.
-- Guía de Registro Nacional de Cáncer.
-- Guía de receta electrónica.
-- Guía de laboratorio.
-- Guía de vigilancia epidemiológica.
-- Guía de inmunizaciones.
-- Guía de referencia y contrarreferencia.
+- perfiles FHIR comunes utilizados por los diferentes tracks;
+- reglas para la representación de pacientes, profesionales, organizaciones y otros actores;
+- perfiles para información clínica y documentos;
+- identificadores y extensiones requeridas;
+- terminologías y conjuntos de valores;
+- mecanismos de intercambio de información;
+- ejemplos de recursos e interacciones;
+- reglas y herramientas de validación;
+- requerimientos aplicables al entorno de pruebas; y
+- especificaciones particulares de cada track de la Conectatón.
 
----
-
-### Público Objetivo
-
-Esta guía está dirigida a:
-
-- Desarrolladores e integradores de sistemas de información en salud.
-- Arquitectos de soluciones de salud digital.
-- Equipos técnicos de interoperabilidad.
-- Proveedores de sistemas de historia clínica electrónica.
-- Instituciones públicas y privadas del sector salud.
-- Laboratorios clínicos y de anatomía patológica.
-- Farmacias y servicios farmacéuticos.
-- Aseguradoras y administradores de riesgos de salud.
-- Equipos de gobernanza de datos, terminologías y estándares.
-- Autoridades regulatorias y programas nacionales de salud.
+> **Importante:** Los requerimientos establecidos en esta guía corresponden al entorno de prueba de la Conectatón. Su cumplimiento durante el ejercicio no implica, por sí mismo, autorización para utilizar estos mismos mecanismos o configuraciones en ambientes productivos.
 
 ---
 
-### Estructura de la Guía
+## Tracks de la Conectatón
 
-La guía se organiza en las siguientes secciones:
+La Conectatón 2026 se organiza en tres tracks de interoperabilidad.
 
-- [Inicio](index.html): Página de Inicio de la Guía.
-- [Perfiles FHIR](perfiles.html): Definiciones extendidas de recursos FHIR base para el contexto nacional.
-- [Extensiones](extensiones.html): Campos adicionales requeridos para representar datos nacionales.
-- [Terminologías](terminologias.html): CodeSystems y ValueSets nacionales o internacionales adoptados.
-- [Ejemplos](ejemplos.html): Recursos FHIR ilustrativos aplicados al contexto dominicano.
-- [Flujo de Intercambio](flujo.html): Lineamientos generales para intercambio de información.
-- [Seguridad](seguridad.html): Consideraciones sobre protección de datos, privacidad, consentimiento y trazabilidad.
-- [Validación](validacion.html): Reglas de validación estructural y semántica.
-- [Descargas](descargas.html): Paquetes, definiciones computables y artefactos de la guía.
+### Track 1 — Intercambio de documentos clínicos
 
----
+Este track evalúa la capacidad de los sistemas participantes para generar, publicar, consultar, recuperar y consumir información clínica mediante documentos estructurados e intercambios basados en estándares FHIR.
 
-### Dependencias Técnicas
+El escenario utiliza como referencia el **International Patient Summary (IPS)** y los mecanismos definidos para el intercambio de documentos clínicos.
 
-Esta guía se basa en:
+### Track 2 — Interoperabilidad de información de vacunación
 
-| Dependencia | Versión |
-|------------|---------|
-| HL7® FHIR® | R4 / 4.0.1 |
-| HL7 Terminology | Según versión declarada en el paquete |
-| FHIR Shorthand / SUSHI | Para definición de perfiles y artefactos |
-| HL7 IG Publisher | Para publicación de la guía |
+Este track evalúa el intercambio de información relacionada con inmunización y la capacidad de diferentes sistemas para representar, generar, consultar o consumir información de vacunación utilizando los perfiles y terminologías definidos para el ejercicio.
+
+### Track 3 — Vigilancia epidemiológica
+
+Este track evalúa la capacidad de los sistemas de los prestadores para generar y transmitir información estructurada relacionada con eventos de interés epidemiológico hacia los sistemas nacionales de vigilancia.
+
+Cada track contiene sus propios escenarios, actores, requisitos, perfiles, operaciones y criterios de validación.
 
 ---
 
-### Principios de Diseño
+## Especificaciones comunes
 
-Esta guía adopta los siguientes principios:
+Los diferentes tracks reutilizan un conjunto de artefactos comunes definidos en esta guía.
 
-- Reutilización de perfiles y artefactos oficiales HL7 cuando sea posible.
-- Separación entre artefactos Core y casos de uso específicos.
-- Uso de terminologías internacionales cuando existan y sean aplicables.
-- Uso de catálogos nacionales para dominios administrativos locales.
-- Minimización de extensiones cuando FHIR base ya cubra el requerimiento.
-- Compatibilidad con validadores FHIR estándar.
-- Trazabilidad de datos clínicos y administrativos.
-- Protección de datos personales y sensibles de salud.
+Estos componentes permiten que conceptos fundamentales sean representados de la misma forma independientemente del escenario en que sean utilizados.
 
----
+### Base
 
-### Artefactos Principales
+Incluye los perfiles utilizados para representar elementos comunes como:
 
-Los artefactos principales de esta guía incluyen:
+- pacientes;
+- profesionales de salud;
+- organizaciones;
+- establecimientos de salud; y
+- otros actores requeridos por los intercambios.
 
-| Dominio | Recurso FHIR |
-|--------|--------------|
-| Paciente | `Patient` |
-| Profesional de salud | `Practitioner` |
-| Rol profesional | `PractitionerRole` |
-| Organización | `Organization` |
-| Ubicación | `Location` |
-| Condición clínica | `Condition` |
-| Alergia / intolerancia | `AllergyIntolerance` |
-| Medicamento | `Medication` |
-| Historial farmacológico | `MedicationStatement` |
-| Solicitud de medicamento | `MedicationRequest` |
-| Documento clínico | `Composition` |
-| Paquete documental | `Bundle` |
+### Información clínica
+
+Contiene los perfiles necesarios para representar información clínica estructurada utilizada por los diferentes escenarios.
+
+### Documentos
+
+Define los artefactos requeridos para representar documentos clínicos y su contenido utilizando FHIR.
+
+### MHD
+
+Incluye las especificaciones utilizadas para la publicación, consulta y recuperación de documentos cuando el escenario requiera mecanismos basados en **Mobile access to Health Documents (MHD)**.
+
+### Terminologías
+
+Contiene los `CodeSystem`, `ValueSet` y demás artefactos semánticos utilizados por los perfiles de esta guía.
 
 ---
 
-### Autoridades
+## ¿Qué deberá poder hacer un equipo participante?
 
-| Nombre | Rol | Organización |
-|--------|-----|--------------|
-| Dr. Víctor Atallah | Ministro de Salud | [Ministerio de Salud Pública y Asistencia Social](https://www.msp.gob.do) |
-| Lcda. Yudelka Batista | Viceministra de Fortalecimiento y Desarrollo del Sector Salud | [Ministerio de Salud Pública y Asistencia Social](https://www.msp.gob.do) |
-| Ing. Santiago Burgos | Director de Tecnología de la Información y Comunicación | [Ministerio de Salud Pública y Asistencia Social](https://www.msp.gob.do) |
-| Ing. Luis Ceballo | Director de Gestión de la Información y Estadísticas de Salud | [Ministerio de Salud Pública y Asistencia Social](https://www.msp.gob.do) |
+Dependiendo del track y del rol asumido dentro del escenario, un equipo podrá actuar como **productor, consumidor o ambos**.
 
----
+Durante la preparación y ejecución de la Conectatón, deberá demostrar las capacidades que correspondan a su escenario, incluyendo:
 
-### Autores y Colaboradores
+1. representar información utilizando los perfiles FHIR definidos;
+2. generar recursos e instancias válidas;
+3. utilizar correctamente identificadores y terminologías;
+4. ejecutar las operaciones e interacciones requeridas;
+5. publicar o transmitir información cuando corresponda;
+6. consultar o recuperar información desde otros sistemas;
+7. procesar la información recibida;
+8. identificar y manejar respuestas de error; y
+9. completar el flujo de interoperabilidad definido para la prueba.
 
-#### MISPAS
-- [Ing. Joel Tavarez](https://linkedin.com/in/joeltavarezestevez "Perfil de LinkedIn de Joel Tavarez") – Encargado del Departamento de Desarrollo e Implementación de Sistemas.
-- [Lic. David Threan](https://www.linkedin.com/in/davidthrean/ "Perfil de LinkedIn de David Threan") – Encargado de Producción de Servicios de Salud.
-
-#### SNS
-- Ing. Nicki Castillo – Encargado de Operaciones TIC.
-- Ing. Iván Lora – Encargado de Desarrollo e Implementación de Sistemas.
-- Ing. Edwin Ramírez – Director de Gestión de la Información y Estadísticas en Salud.
-
-- Equipos técnicos y funcionales del Ministerio de Salud Pública y Asistencia Social y del Servicio Nacional de Salud.
+No todos los equipos deberán implementar todas las operaciones. Los requerimientos específicos dependerán del **track, escenario y rol asignado**.
 
 ---
 
-### Licencia
+## Principio de capacidad demostrable
 
-Este trabajo se publica bajo licencia [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/) y se encuentra en proceso de revisión técnica, institucional y comunitaria.
+La Conectatón está basada en el principio de **capacidad demostrable**.
+
+Esto significa que el cumplimiento de una prueba no se determinará únicamente por la existencia de una API, un servidor FHIR o un recurso sintácticamente válido.
+
+El objetivo es demostrar que sistemas independientes pueden ejecutar correctamente un **flujo de interoperabilidad de extremo a extremo (End-to-End)**.
+
+De manera general, una prueba podrá involucrar la siguiente secuencia:
+
+**Sistema origen → Representación FHIR → Intercambio → Sistema receptor → Validación → Uso de la información**
+
+Las pruebas parciales serán útiles durante la preparación y el Pre-Conectatón para identificar errores y avanzar progresivamente. Sin embargo, la validación del escenario se realizará conforme a los criterios definidos para cada track.
 
 ---
 
+## Cómo utilizar esta guía
+
+Antes de iniciar la implementación, cada equipo deberá identificar:
+
+- el track o los tracks en los que participará;
+- el escenario que deberá ejecutar; y
+- el rol que asumirá dentro del intercambio.
+
+A partir de esta definición, se recomienda seguir la siguiente secuencia:
+
+1. revisar la descripción funcional del escenario;
+2. identificar los actores y roles involucrados;
+3. identificar los perfiles FHIR requeridos;
+4. revisar las cardinalidades y restricciones de cada perfil;
+5. implementar los identificadores y terminologías correspondientes;
+6. revisar los ejemplos publicados;
+7. configurar las operaciones o mecanismos de intercambio;
+8. generar o consumir los recursos requeridos;
+9. validar las instancias contra esta guía;
+10. ejecutar las pruebas preparatorias; y
+11. completar durante la Conectatón las pruebas definidas con otros participantes.
+
+---
+
+## Validación
+
+Los recursos utilizados durante las pruebas deberán cumplir con los perfiles correspondientes de esta Guía de Implementación.
+
+Cuando aplique, las instancias deberán declarar explícitamente el perfil que implementan mediante:
+
+## Validación
+
+Los recursos intercambiados durante la Conectatón deberán cumplir con los perfiles correspondientes definidos por esta Guía de Implementación.
+
+Cuando corresponda, las instancias deberán declarar explícitamente el perfil que implementan mediante `meta.profile`.
+
+Ejemplo:
+
+```json
+{
+  "resourceType": "Patient",
+  "meta": {
+    "profile": [
+      "https://digital.msp.gob.do/fhir/conectaton/StructureDefinition/PatientDO"
+    ]
+  }
+}
+```
+
+La validación podrá considerar diferentes niveles.
+
+### Validación sintáctica
+
+Verifica que el recurso pueda ser interpretado correctamente como una instancia FHIR válida.
+
+### Validación estructural
+
+Comprueba:
+
+- cardinalidades;
+- tipos de datos;
+- restricciones;
+- referencias;
+- elementos obligatorios; y
+- conformidad con el perfil declarado.
+
+### Validación semántica
+
+Comprueba:
+
+- `CodeSystem`;
+- `ValueSet`;
+- códigos;
+- `bindings`;
+- identificadores; y
+- terminologías requeridas.
+
+### Validación funcional
+
+Comprueba que el sistema sea capaz de utilizar correctamente el recurso dentro del escenario de interoperabilidad.
+
+> Un recurso técnicamente válido **no implica necesariamente que la prueba haya sido completada satisfactoriamente**.
+
+La evaluación final dependerá de la ejecución del escenario completo y de los criterios definidos para cada prueba.
+
+---
+
+## Datos de Prueba
+
+La Conectatón se realizará utilizando **datos de prueba** preparados específicamente para los escenarios definidos.
+
+No deberán utilizarse datos reales de pacientes.
+
+Los participantes trabajarán con:
+
+- pacientes ficticios;
+- identificadores de prueba;
+- profesionales ficticios cuando corresponda;
+- organizaciones y establecimientos definidos para las pruebas;
+- información clínica simulada;
+- registros de vacunación de prueba;
+- eventos epidemiológicos simulados; y
+- documentos clínicos preparados para los escenarios.
+
+Los datasets serán utilizados de manera consistente entre los participantes para facilitar la reproducción y validación de los resultados.
+
+---
+
+## Entornos de Ejecución
+
+Las pruebas serán realizadas en ambientes controlados.
+
+Cada participante podrá utilizar:
+
+- ambientes de prueba de sus sistemas institucionales;
+- servidores FHIR propios;
+- servidores FHIR habilitados para el ejercicio;
+- middleware;
+- adaptadores;
+- motores de integración;
+- herramientas de transformación; o
+- componentes desarrollados específicamente para la Conectatón.
+
+La arquitectura interna de cada participante no será evaluada.
+
+Lo relevante será su capacidad para cumplir las interfaces, perfiles y reglas definidas por esta guía.
+
+---
+
+## Qué No Define esta Guía
+
+Esta guía no pretende definir:
+
+- la arquitectura interna de los sistemas participantes;
+- un producto tecnológico obligatorio;
+- un proveedor específico;
+- un lenguaje de programación;
+- una plataforma FHIR determinada;
+- un HIS, EHR, LIS u otro sistema específico;
+- los requisitos completos para ambientes productivos;
+- todos los futuros casos de uso de interoperabilidad en salud del país; ni
+- las políticas institucionales internas de cada participante.
+
+La conformidad durante la Conectatón se evalúa sobre los **artefactos, interfaces, operaciones y capacidades requeridas por los escenarios de prueba**.
+
+---
+
+## Público Objetivo
+
+Esta guía está dirigida principalmente a:
+
+- desarrolladores de sistemas de información en salud;
+- integradores;
+- arquitectos de soluciones;
+- especialistas en interoperabilidad;
+- equipos responsables de APIs e integración;
+- proveedores de HIS, EHR y LIS;
+- equipos técnicos de prestadores de servicios de salud;
+- equipos técnicos del Ministerio de Salud Pública y Asistencia Social;
+- equipos técnicos de los sistemas nacionales involucrados;
+- especialistas responsables de terminologías;
+- monitores técnicos de la Conectatón; y
+- demás actores responsables de implementar o validar los escenarios de prueba.
+
+---
+
+## Estructura de la Guía
+
+La documentación se organiza en diferentes bloques según su función dentro de la Conectatón.
+
+### Base
+
+Contiene los perfiles fundamentales reutilizados por los diferentes escenarios:
+
+- Paciente.
+- Profesional.
+- Organización.
+
+### Información Clínica
+
+Contiene perfiles relacionados con información clínica requerida por los tracks.
+
+### Documentos
+
+Contiene perfiles utilizados para construir documentos clínicos:
+
+- `Composition`;
+- `DocumentReference`;
+- `Bundle` documental.
+
+### MHD
+
+Contiene artefactos relacionados con el intercambio de documentos:
+
+- `List`;
+- `DocumentReference`;
+- `Bundle` transaccional; y
+- operaciones requeridas por los escenarios MHD.
+
+### Terminologías
+
+Contiene:
+
+- `CodeSystem`;
+- `ValueSet`;
+- identificadores;
+- catálogos; y
+- reglas de codificación.
+
+### Conectatón 2026
+
+Contiene la documentación específica del ejercicio:
+
+- tracks;
+- escenarios;
+- detalles de las pruebas;
+- flujo de intercambio;
+- seguridad;
+- validación;
+- datos de prueba; y
+- comunicación y soporte.
+
+### Artefactos
+
+Incluye las páginas generadas por el Implementation Guide:
+
+- perfiles;
+- extensiones;
+- terminologías;
+- ejemplos;
+- artefactos computables; y
+- descargas.
+
+---
+
+## Navegación Recomendada
+
+Si participa por primera vez en la Conectatón, se recomienda revisar la guía en el siguiente orden:
+
+1. **Inicio**  
+   Comprender el propósito, alcance y funcionamiento general del ejercicio.
+
+2. **Track correspondiente**  
+   Revisar el escenario en el que participará.
+
+3. **Perfiles**  
+   Identificar las estructuras FHIR que deberá producir o consumir.
+
+4. **Terminologías**  
+   Revisar códigos, catálogos y `ValueSet`.
+
+5. **Ejemplos**  
+   Consultar instancias de referencia.
+
+6. **Flujo de Intercambio**  
+   Comprender las operaciones que deberán ejecutarse entre los sistemas.
+
+7. **Seguridad**  
+   Configurar los mecanismos requeridos para conectarse al entorno de prueba.
+
+8. **Validación**  
+   Verificar que los recursos y operaciones cumplen las especificaciones.
+
+9. **Comunicación y Soporte**  
+   Consultar los canales de coordinación y asistencia disponibles.
+
+---
+
+## Dependencias Técnicas
+
+Esta Guía de Implementación utiliza las siguientes especificaciones y herramientas:
+
+| Dependencia | Uso |
+|---|---|
+| HL7® FHIR® R4 | Estándar base para representación e intercambio de información |
+| International Patient Summary (IPS) | Referencia para escenarios de resumen clínico |
+| IHE MHD | Intercambio de documentos cuando corresponda |
+| Terminologías clínicas | Codificación estandarizada de conceptos |
+| FHIR Shorthand / SUSHI | Definición de perfiles y artefactos |
+| HL7 IG Publisher | Generación y publicación de la Guía de Implementación |
+
+Las dependencias adicionales requeridas por un track deberán declararse en su sección correspondiente.
+
+---
+
+## Estado de la Guía
+
+Esta es una **versión de trabajo** de la Guía de Implementación utilizada para la preparación de la **Primera Conectatón Nacional de Interoperabilidad en Salud de la República Dominicana 2026**.
+
+Durante el período previo al evento podrán publicarse nuevas versiones con el propósito de:
+
+- corregir errores;
+- aclarar requerimientos;
+- incorporar ajustes derivados de las pruebas;
+- actualizar perfiles;
+- actualizar terminologías;
+- incorporar nuevos ejemplos;
+- mejorar los criterios de validación; o
+- resolver hallazgos identificados durante las actividades preparatorias y el Pre-Conectatón.
+
+Cada publicación deberá estar identificada mediante un número de versión y su correspondiente historial de cambios.
+
+Los participantes deberán verificar que están utilizando la **versión vigente de la guía** antes de ejecutar las pruebas oficiales.
+
+---
 
 ## Convenciones
 
-Todos los perfiles nacionales usan el sufijo `DO` y se publican bajo la URL Canónica:
+Los perfiles y artefactos definidos específicamente para la República Dominicana utilizan, cuando corresponde, el sufijo:
 
-```text
-https://digital.msp.gob.do/fhir/core
-```
+`DO`
 
-¿Tienes preguntas o deseas colaborar? Contacta al equipo técnico responsable de interoperabilidad FHIR del Ministerio de Salud Pública y Asistencia Social.
+Por ejemplo:
+
+- `PatientDO`
+- `PractitionerDO`
+- `OrganizationDO`
+- `ConditionDO`
+- `CompositionDO`
+
+La URL canónica de los artefactos deberá corresponder con las URLs publicadas en esta Guía de Implementación.
+
+Los implementadores **no deberán construir manualmente las URLs canónicas** de los `StructureDefinition`, `CodeSystem`, `ValueSet` u otros artefactos. Deberán utilizar las URLs declaradas en cada recurso publicado por la guía.
+
+---
+
+
+## Consideración Final
+
+Esta Guía de Implementación debe entenderse como la **especificación técnica de referencia para la Conectatón República Dominicana 2026**.
+
+Su objetivo no es definir cómo deben construirse internamente los sistemas de información de salud, sino establecer un lenguaje, un conjunto de perfiles y reglas comunes que permitan comprobar que sistemas independientes pueden **intercambiar, interpretar y utilizar información de manera interoperable**.
+
+El resultado esperado de la Conectatón no es únicamente demostrar que dos sistemas pueden establecer una conexión técnica o intercambiar un recurso FHIR válido.
+
+El objetivo es demostrar, mediante escenarios reproducibles y verificables, que distintos actores pueden implementar consistentemente las especificaciones definidas y completar **flujos de interoperabilidad de extremo a extremo**.
