@@ -1,0 +1,103 @@
+{
+  "resourceType": "Bundle",
+  "type": "document",
+  "timestamp": "2026-08-18T14:00:00-03:00",
+  "identifier": {
+    "system": "http://example.org/documentos",
+    "value": "DOC-PDF-001"
+  },
+  "entry": [
+    {
+      "fullUrl": "urn:uuid:composition-001",
+      "resource": {
+        "resourceType": "Composition",
+        "id": "composition-001",
+        "status": "final",
+        "type": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "34133-9",
+              "display": "Summary of episode note"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "urn:uuid:patient-001"
+        },
+        "date": "2026-08-18T14:00:00-03:00",
+        "author": [
+          {
+            "reference": "urn:uuid:practitioner-001"
+          }
+        ],
+        "title": "Documento clínico con PDF",
+        "section": [
+          {
+            "title": "Informe clínico en PDF",
+            "code": {
+              "coding": [
+                {
+                  "system": "http://example.org/fhir/CodeSystem/secciones-documento",
+                  "code": "documento-pdf",
+                  "display": "Documento PDF"
+                }
+              ]
+            },
+            "entry": [
+              {
+                "reference": "urn:uuid:binary-pdf-001",
+                "display": "Informe clínico PDF"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:binary-pdf-001",
+      "resource": {
+        "resourceType": "Binary",
+        "id": "binary-pdf-001",
+        "contentType": "application/pdf",
+        "data": "JVBERi0xLjQKJcTl8uXrCiUlRU9GCg=="
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:patient-001",
+      "resource": {
+        "resourceType": "Patient",
+        "id": "patient-001",
+        "identifier": [
+          {
+            "system": "http://example.org/pacientes",
+            "value": "12345"
+          }
+        ],
+        "name": [
+          {
+            "family": "Pérez",
+            "given": [
+              "Ana"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:practitioner-001",
+      "resource": {
+        "resourceType": "Practitioner",
+        "id": "practitioner-001",
+        "name": [
+          {
+            "family": "Gómez",
+            "given": [
+              "María"
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,52 @@
+* entry contains
+    composicion 1..1 and
+    pdf 1..1 and
+    paciente 0..1 and
+    autor 0..*
+
+* entry[composicion].resource only CompositionConPDF
+* entry[pdf].resource only Binary
+
+
+
+
+* section[documentoPDF].entry 1..1
+* section[documentoPDF].entry only Reference(Binary)
+
+
+
+
+---------------------------------------------------------
+flowchart TB
+    DS["Document Source"] -->|"POST ITI-65"| MHD["Bundle transaction MHD"]
+
+    subgraph TX["Provide Document Bundle"]
+        SS["List SubmissionSet"]
+        DR["DocumentReference MHD"]
+        DOC["Bundle document FHIR"]
+
+        SS -->|"entry.item"| DR
+        DR -->|"attachment.url"| DOC
+    end
+
+    MHD --> SS
+    MHD --> DR
+    MHD --> DOC
+
+    subgraph FD["Contenido del Bundle document"]
+        C["Composition"]
+        PDF["Binary PDF"]
+        P["Patient"]
+        PR["Practitioner"]
+
+        C -->|"section.entry"| PDF
+        C -->|"subject"| P
+        C -->|"author"| PR
+    end
+
+    DOC --> C
+    DOC --> PDF
+    DOC --> P
+    DOC --> PR
+
+    ---------------------------------------------------------
