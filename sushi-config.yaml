@@ -6,7 +6,7 @@ description: "Guía Conectaton Nacional de República Dominicana para recursos, 
 language: es
 license: CC-BY-4.0
 status: draft
-version: 0.1.0
+version: 0.2.0
 fhirVersion: 4.0.1
 copyrightYear: 2026
 releaseLabel: "ci-build"
@@ -28,6 +28,7 @@ parameters:
 
 menu:
   Inicio: index.html
+  #Inicio2: index2.html
   BASE:
     -Resumen: pendiente.html
     Paciente: StructureDefinition-PatientDO.html
@@ -41,29 +42,29 @@ menu:
   DOCUMENTOS:
     -Resumen: pendiente.html
     Composition: StructureDefinition-CompositionDO.html
-    Bundle: StructureDefinition-BundleDO.html
+    Bundle: StructureDefinition-BundleNPSDO.html
   MHD: 
     -Resumen: pendiente.html
     List: StructureDefinition-ListDO.html
     Documento: StructureDefinition-DocumentReferenceDO.html    
   TERMINOLOGIAS:
     -Resumen: pendiente.html
-    Terminologia: terminologia.html
-    Codigos: codigos.html
+    Terminologia: terminologias.html
+    #Codigos: codigos.html
   CONECTATON 2026:
-  Detalles: conectaton.html
-  OTROS:
-    Flujo de Intercambio: flujo.html
-    Seguridad: seguridad.html
+    Detalles: conectaton.html
     Validación: validacion.html
-    Resumen: artifacts.html
-    Perfiles: perfiles.html
-    Extensiones: extensiones.html
-    Terminologías: terminologias.html
-    Ejemplos: ejemplos.html
+  OTROS:
     Descargas: descargas.html
 
-
+# Flujo de Intercambio: flujo.html
+# Seguridad: seguridad.html
+# Validación: validacion.html
+# Resumen: artifacts.html
+# Perfiles: perfiles.html
+# Extensiones: extensiones.html
+# Terminologías: terminologias.html
+# Ejemplos: ejemplos.html
 
 # contact:
 #   - name: Joel Tavárez

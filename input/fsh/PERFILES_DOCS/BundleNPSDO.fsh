@@ -1,7 +1,7 @@
 
-Profile: BundleDocDO
+Profile: BundleNPSDO
 Parent: $Bundle-uv-ips
-Id: BundleDocDO
+Id: BundleNPSDO
 
 /*   --------- Compostion ---------*/
 * entry[composition] ^short = "Composition."

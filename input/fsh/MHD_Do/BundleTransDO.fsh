@@ -16,7 +16,7 @@ Id: BundleTransaccAR
 
 * entry[FhirDocuments] 1..1
 * entry[FhirDocuments].resource 1..1
-* entry[FhirDocuments].resource only BundleDocDO
+* entry[FhirDocuments].resource only BundleNPSDO
 
 
 
