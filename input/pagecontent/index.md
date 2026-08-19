@@ -45,9 +45,7 @@ Incluye:
 
 > **Importante:** Los requerimientos establecidos en esta guía corresponden al entorno de prueba de la Conectatón. Su cumplimiento durante el ejercicio no implica, por sí mismo, autorización para utilizar estos mismos mecanismos o configuraciones en ambientes productivos.
 
----
-
-## Tracks de la Conectatón
+---## Tracks de la Conectatón
 
 La Conectatón 2026 se organiza en tres tracks de interoperabilidad.
 
@@ -57,16 +55,15 @@ Este track evalúa la capacidad de los sistemas participantes para generar, publ
 
 El escenario utiliza como referencia el **International Patient Summary (IPS)** y los mecanismos definidos para el intercambio de documentos clínicos.
 
-### Track 2 — Interoperabilidad de información de vacunación
+### Track 2 — Registro Nacional de Cáncer (RENAC)
 
-Este track evalúa el intercambio de información relacionada con inmunización y la capacidad de diferentes sistemas para representar, generar, consultar o consumir información de vacunación utilizando los perfiles y terminologías definidos para el ejercicio.
+Este track evalúa el intercambio de información  relacionada con casos oncológicos hacia el Registro Nacional de Cáncer, de acuerdo con los perfiles y reglas definidos por el MISPAS. 
 
 ### Track 3 — Vigilancia epidemiológica
 
 Este track evalúa la capacidad de los sistemas de los prestadores para generar y transmitir información estructurada relacionada con eventos de interés epidemiológico hacia los sistemas nacionales de vigilancia.
 
 Cada track contiene sus propios escenarios, actores, requisitos, perfiles, operaciones y criterios de validación.
-
 ---
 
 ## Especificaciones comunes
@@ -374,7 +371,7 @@ Incluye las páginas generadas por el Implementation Guide:
 
 ---
 
-## Navegación Recomendada
+<!-- ## Navegación Recomendada
 
 Si participa por primera vez en la Conectatón, se recomienda revisar la guía en el siguiente orden:
 
@@ -405,7 +402,7 @@ Si participa por primera vez en la Conectatón, se recomienda revisar la guía e
 9. **Comunicación y Soporte**  
    Consultar los canales de coordinación y asistencia disponibles.
 
----
+--- -->
 
 ## Dependencias Técnicas
 

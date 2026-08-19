@@ -9,9 +9,9 @@ Este track evalúa la capacidad de los sistemas participantes para generar, publ
 
 El escenario utiliza como referencia el **International Patient Summary (IPS)** y los mecanismos definidos para el intercambio de documentos clínicos.
 
-### Track 2 — Interoperabilidad de información de vacunación
+### Track 2 — Registro Nacional de Cáncer (RENAC)
 
-Este track evalúa el intercambio de información relacionada con inmunización y la capacidad de diferentes sistemas para representar, generar, consultar o consumir información de vacunación utilizando los perfiles y terminologías definidos para el ejercicio.
+Este track evalúa el intercambio de información  relacionada con casos oncológicos hacia el Registro Nacional de Cáncer, de acuerdo con los perfiles y reglas definidos por el MISPAS. 
 
 ### Track 3 — Vigilancia epidemiológica
 

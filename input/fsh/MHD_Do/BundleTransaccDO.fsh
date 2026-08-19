@@ -1,6 +1,5 @@
 Profile: BundleTransaccDO
 Parent: https://profiles.ihe.net/ITI/MHD/StructureDefinition/IHE.MHD.Minimal.ProvideBundle
-Id: BundleTransaccAR
 
 * entry[Patient] 1..1
 * entry[Patient].resource 1..1

@@ -6,9 +6,12 @@ Description: "Ejemplo de historial farmacológico del paciente."
 
 * status = #active
 * effectiveDateTime = "2026-08-10"
+
 * medicationCodeableConcept.coding.system = "http://www.nlm.nih.gov/research/umls/rxnorm"
 * medicationCodeableConcept.coding.code = #1049630
 * medicationCodeableConcept.coding.display = "Amoxicillin 500 mg"
+
+
 * subject = Reference(PatientDO/PatientDOExample)
 * dateAsserted = "2026-08-10"
 * informationSource = Reference(PractitionerDO/PractitionerDOExample)

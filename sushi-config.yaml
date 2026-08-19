@@ -1,7 +1,7 @@
 id: msp.fhir.do
 canonical: https://digital.msp.gob.do/fhir/conectaton
 name: fhir-ig-do
-title: "Guía FHIR DO"
+title: "Guía FHIR DO - Conectaton Nacional República Dominicana"
 description: "Guía Conectaton Nacional de República Dominicana para recursos, extensiones, terminologías y patrones comunes de interoperabilidad FHIR."
 language: es
 license: CC-BY-4.0
@@ -28,47 +28,25 @@ parameters:
 
 menu:
   Inicio: index.html
-  #Inicio2: index2.html
   BASE:
-    -Resumen: pendiente.html
     Paciente: StructureDefinition-PatientDO.html
     Profesional: StructureDefinition-PractitionerDO.html
     Organización: StructureDefinition-OrganizationDO.html
   INFORMACION CLINICA:
-    -Resumen: pendiente.html
     Alergias: StructureDefinition-AllergyIntoleranceDO.html
     Medicamentos: StructureDefinition-MedicationStatementDO.html
     Condition: StructureDefinition-ConditionDO.html
   DOCUMENTOS:
-    -Resumen: pendiente.html
     Composition: StructureDefinition-CompositionDO.html
-    Bundle: StructureDefinition-BundleNPSDO.html
+    BundleNPS: StructureDefinition-BundleNPSDO.html
   MHD: 
-    -Resumen: pendiente.html
     List: StructureDefinition-ListDO.html
-    Documento: StructureDefinition-DocumentReferenceDO.html    
+    Documento: StructureDefinition-DocumentReferenceDO.html
+    Transaccion: StructureDefinition-BundleTransaccDO.html
   TERMINOLOGIAS:
-    -Resumen: pendiente.html
     Terminologia: terminologias.html
-    #Codigos: codigos.html
   CONECTATON 2026:
     Detalles: conectaton.html
     Validación: validacion.html
   OTROS:
     Descargas: descargas.html
-
-# Flujo de Intercambio: flujo.html
-# Seguridad: seguridad.html
-# Validación: validacion.html
-# Resumen: artifacts.html
-# Perfiles: perfiles.html
-# Extensiones: extensiones.html
-# Terminologías: terminologias.html
-# Ejemplos: ejemplos.html
-
-# contact:
-#   - name: Joel Tavárez
-#     telecom:
-#       - system: email
-#         value: joel.tavarez@ministeriodesalud.gob.do
-#         use: work

@@ -47,6 +47,27 @@ Incluye:
 
 ---
 
+## Tracks de la Conectatón
+
+La Conectatón 2026 se organiza en tres tracks de interoperabilidad.
+
+### Track 1 — Intercambio de documentos clínicos
+
+Este track evalúa la capacidad de los sistemas participantes para generar, publicar, consultar, recuperar y consumir información clínica mediante documentos estructurados e intercambios basados en estándares FHIR.
+
+El escenario utiliza como referencia el **International Patient Summary (IPS)** y los mecanismos definidos para el intercambio de documentos clínicos.
+
+### Track 2 — Interoperabilidad de información de vacunación
+
+Este track evalúa el intercambio de información relacionada con inmunización y la capacidad de diferentes sistemas para representar, generar, consultar o consumir información de vacunación utilizando los perfiles y terminologías definidos para el ejercicio.
+
+### Track 3 — Vigilancia epidemiológica
+
+Este track evalúa la capacidad de los sistemas de los prestadores para generar y transmitir información estructurada relacionada con eventos de interés epidemiológico hacia los sistemas nacionales de vigilancia.
+
+Cada track contiene sus propios escenarios, actores, requisitos, perfiles, operaciones y criterios de validación.
+
+---
 
 ## Especificaciones comunes
 
@@ -139,6 +160,69 @@ A partir de esta definición, se recomienda seguir la siguiente secuencia:
 9. validar las instancias contra esta guía;
 10. ejecutar las pruebas preparatorias; y
 11. completar durante la Conectatón las pruebas definidas con otros participantes.
+
+---
+
+## Validación
+
+Los recursos utilizados durante las pruebas deberán cumplir con los perfiles correspondientes de esta Guía de Implementación.
+
+Cuando aplique, las instancias deberán declarar explícitamente el perfil que implementan mediante:
+
+## Validación
+
+Los recursos intercambiados durante la Conectatón deberán cumplir con los perfiles correspondientes definidos por esta Guía de Implementación.
+
+Cuando corresponda, las instancias deberán declarar explícitamente el perfil que implementan mediante `meta.profile`.
+
+Ejemplo:
+
+```json
+{
+  "resourceType": "Patient",
+  "meta": {
+    "profile": [
+      "https://digital.msp.gob.do/fhir/conectaton/StructureDefinition/PatientDO"
+    ]
+  }
+}
+```
+
+La validación podrá considerar diferentes niveles.
+
+### Validación sintáctica
+
+Verifica que el recurso pueda ser interpretado correctamente como una instancia FHIR válida.
+
+### Validación estructural
+
+Comprueba:
+
+- cardinalidades;
+- tipos de datos;
+- restricciones;
+- referencias;
+- elementos obligatorios; y
+- conformidad con el perfil declarado.
+
+### Validación semántica
+
+Comprueba:
+
+- `CodeSystem`;
+- `ValueSet`;
+- códigos;
+- `bindings`;
+- identificadores; y
+- terminologías requeridas.
+
+### Validación funcional
+
+Comprueba que el sistema sea capaz de utilizar correctamente el recurso dentro del escenario de interoperabilidad.
+
+> Un recurso técnicamente válido **no implica necesariamente que la prueba haya sido completada satisfactoriamente**.
+
+La evaluación final dependerá de la ejecución del escenario completo y de los criterios definidos para cada prueba.
 
 ---
 
