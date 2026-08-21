@@ -16,8 +16,7 @@ Parent: https://profiles.ihe.net/ITI/MHD/StructureDefinition/IHE.MHD.Minimal.Pro
 
 * entry[FhirDocuments] 1..1
 * entry[FhirDocuments].resource 1..1
-* entry[FhirDocuments].resource only BundleNPSDO
-
+* entry[FhirDocuments].resource only BundleNPSDO or BundleOncoDO or BundleNotifDO
 
 
 /*------------------------------------------------------------------------------------------
