@@ -36,12 +36,13 @@ menu:
     Alergias: StructureDefinition-AllergyIntoleranceDO.html
     Medicamentos: StructureDefinition-MedicationStatementDO.html
     Condition: StructureDefinition-ConditionDO.html
-  DOCUMENTOS:
-    Composition: StructureDefinition-CompositionDO.html
-    BundleNPS: StructureDefinition-BundleNPSDO.html
+  DOCUMENTOS:   
+    1-Resumen Paciente: resumenpaciente.html
+    2-Notificación Individual Caso: notificacionepidemiologica.html
+    3-Registro Nacional de Cáncer: resumenoncologico.html
   MHD: 
     List: StructureDefinition-ListDO.html
-    Documento: StructureDefinition-DocumentReferenceDO.html
+    IndiceDocumentos: StructureDefinition-DocumentReferenceDO.html
     Transaccion: StructureDefinition-BundleTransaccDO.html
   TERMINOLOGIAS:
     Terminologia: terminologias.html

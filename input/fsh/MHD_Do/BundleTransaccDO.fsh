@@ -7,7 +7,8 @@ Parent: https://profiles.ihe.net/ITI/MHD/StructureDefinition/IHE.MHD.Minimal.Pro
 
 * entry[DocumentRefs] 1..1
 * entry[DocumentRefs].resource 1..1
-* entry[DocumentRefs].resource only DocumentReferenceDO
+* entry[DocumentRefs].resource only DocumentReferenceDO or DocumentReferenceDOOnco or DocumentReferenceDONotif
+//* entry[FhirDocuments].resource only LACBundleIPS or LACBundleIPSICVP
 
 * entry[SubmissionSet] 1..1
 * entry[SubmissionSet].resource 1..1
