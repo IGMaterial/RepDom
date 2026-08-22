@@ -9,6 +9,8 @@ Alias: $canonicaPatientDO = https://digital.msp.gob.do/fhir/conectaton/Structure
 Alias: $canonicaOrganizationDo = https://digital.msp.gob.do/fhir/conectaton/StructureDefinition/OrganizationDO
 Alias: $canonicaPractitionerDo = https://digital.msp.gob.do/fhir/conectaton/StructureDefinition/PractitionerDO
 Alias: $canonicaBinary = https://digital.msp.gob.do/fhir/conectaton/StructureDefinition/BinaryDO
+Alias: $canonicaCondition = https://digital.msp.gob.do/fhir/conectaton/StructureDefinition/ConditionDO
+
 
 
 /**********************************/

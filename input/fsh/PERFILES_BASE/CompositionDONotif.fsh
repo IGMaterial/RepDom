@@ -23,7 +23,6 @@ Description: "Perfil para documentos Notificación Caso"
 * custodian only Reference(OrganizationDO)
 
 
-
 //----- division de secciones -------
 * section ^slicing.discriminator[0].type = #pattern
 * section ^slicing.discriminator[=].path = "code"
@@ -38,15 +37,23 @@ Description: "Perfil para documentos Notificación Caso"
 
 
 * section contains
-    EventoNotificado 0..1 MS and
+    DatosEnfermedad 0..1 MS and 
+    SignosSintomas 0..1 MS and
     DocumentoPDF 0..1 MS
 
 
-* section[EventoNotificado] ^short = "Sección Evento Notificado"
-* section[EventoNotificado].code MS 
-* section[EventoNotificado].code = $LOINC#99998-9
-* section[EventoNotificado].title 1.. MS
-* section[EventoNotificado].text 1.. MS
+* section[DatosEnfermedad] ^short = "Sección Datos de la Enfermedad"
+* section[DatosEnfermedad].code MS 
+* section[DatosEnfermedad].code = $LOINC#99998-9
+* section[DatosEnfermedad].title 1.. MS
+* section[DatosEnfermedad].text 1.. MS
+* section[DatosEnfermedad].entry only Reference($canonicaCondition)
+
+* section[SignosSintomas] ^short = "Sección Signos y Sintomas"
+* section[SignosSintomas].code MS 
+* section[SignosSintomas].code = $LOINC#99998-9
+* section[SignosSintomas].title 1.. MS
+* section[SignosSintomas].text 1.. MS
 
 
 * section[DocumentoPDF] ^short = "Sección Documento PDF"

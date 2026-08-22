@@ -29,7 +29,8 @@ En este apartado se describen las diferentes secciones incluidas en el documento
 
 | **Entrada** | **Link** | **Descripción** |
 | --- | --- | --- |
-| ✅ **Signos y Sintomas** | [Condition DO](StructureDefinition-ConditionDO.html) | Representa los signos y síntomas encontrados en el paciente. |
+| ✅ **Datos de la enfermedad** | Representado el codigo en CIE 10 | [Condition DO](StructureDefinition-ConditionDO.html) |
+| ✅ **Signos y Sintomas** | Representa los signos y síntomas encontrados en el paciente, en descripción de texto. |
 | ✅ **Documento PDF** | [Documento PDF](StructureDefinition-BinaryDO.html). | Representa el documento PDF asociado, con el detalle de la notificación caso. |
 
 
