@@ -1,12 +1,11 @@
 ### **Introducción**
 
-En esta página, se documenta todos los recursos involucrados para representar la información de resumen de paciente, incluyendo antecedentes, medicación y alergias.
-
+En esta página, se documenta todos los recursos involucrados para la notificacion de un caso de reporte epidemiológico.
 ---
 
 ### **Perfiles**
 
-En esta sección se describen los perfiles especpificos realizados para este contexto de atención.
+En esta sección se describen los perfiles específicos realizados para este contexto de atención.
 
 
 1️⃣ Perfil de **Document Reference Notificación Caso**  para representar el indice de documento de notificación. 

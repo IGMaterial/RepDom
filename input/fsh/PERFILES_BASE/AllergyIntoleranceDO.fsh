@@ -3,7 +3,7 @@ Alias: $alergias-uv-ips = http://hl7.org/fhir/uv/ips/StructureDefinition/Allergy
 
 Profile: AllergyIntoleranceDO
 Parent: $alergias-uv-ips
-
+//DiagnosticReportDO
 Title: "Alergia o Intolerancia DO"
 Description: "Perfil para alergias, intolerancias y reacciones adversas."
 //* ^url = "https://digital.msp.gob.do/fhir/core/StructureDefinition/core-allergyintolerance-do"

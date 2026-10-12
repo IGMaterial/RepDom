@@ -38,8 +38,9 @@ menu:
     Condition: StructureDefinition-ConditionDO.html
   DOCUMENTOS:   
     1-Resumen Paciente: resumenpaciente.html
-    2-Notificación Individual Caso: notificacionepidemiologica.html
-    3-Registro Nacional de Cáncer: resumenoncologico.html
+    2-Informe Laboratorio: reportelaboratorio.html
+    3-Notificación Individual Caso: notificacionepidemiologica.html
+    4-Registro Nacional de Cáncer: resumenoncologico.html
   MHD: 
     List: StructureDefinition-ListDO.html
     IndiceDocumentos: StructureDefinition-DocumentReferenceDO.html
