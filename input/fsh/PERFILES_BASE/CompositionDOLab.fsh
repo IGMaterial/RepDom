@@ -47,8 +47,8 @@ Title: "Documento Clínico Laboratorio"
 * section[DiagnosticReport].code MS
 * section[DiagnosticReport].code = $LOINC#11502-2 "Laboratory report"
 * section[DiagnosticReport].title 1.. MS
-* section[DocumentoPDF].entry 1.. MS
-* section[DocumentoPDF].entry only Reference($canonicaDiagnosticReportDO)  
+* section[DiagnosticReport].entry 1.. MS
+* section[DiagnosticReport].entry only Reference($canonicaDiagnosticReportDO)
 
 
 * section[DocumentoPDF] ^short = "Sección Documento PDF"

@@ -1,0 +1,33 @@
+# Ejemplos de laboratorio
+
+Los cinco archivos `DiagnosticReportDOExample.fsh`, `BinaryDOLabExample.fsh`,
+`CompositionDOLabExample.fsh`, `BundleLabDOExample.fsh` y
+`DocumentReferenceDOLabExample.fsh` representan un unico escenario sintetico.
+Reutilizan `PatientDOExample` y `OrganizationDOExample`.
+
+- `DiagnosticReportDOExample`: informe final y adjunto PDF por URL.
+- `BinaryDOLabExample`: metadatos del PDF; `data` se omite deliberadamente.
+  Para un intercambio con contenido, agregar los bytes del PDF en base64.
+- `CompositionDOLabExample`: secciones de informe y documento PDF.
+- `BundleLabDOExample`: Composition en primer lugar y todos los recursos
+  referenciados, con fullUrl coherentes con las referencias relativas.
+- `DocumentReferenceDOLabExample`: indice que apunta al Bundle JSON.
+
+Las URLs de example.org son ilustrativas y no son servicios disponibles.
+No se agregan Observation, Specimen ni ServiceRequest porque la guia no
+define actualmente perfiles propios para esos recursos.
+
+## Limitaciones del perfil
+
+CompositionDOLab fija el codigo LOINC 99999-9 para la seccion PDF.
+El ejemplo hereda ese valor; se requiere revisar su validez terminologica
+antes de considerar estos ejemplos validados por IG Publisher.
+Se corrigio el cruce de secciones que restringia DocumentoPDF a
+DiagnosticReportDO: ahora esa restriccion corresponde a DiagnosticReport,
+y DocumentoPDF referencia BinaryDO.
+
+## Compilacion
+
+Desde RepDom: `sushi . -o temp/lab-validation`.
+La compilacion SUSHI no sustituye la validacion FHIR y terminologica de
+IG Publisher. Los HTML de output requieren regenerar la guia.

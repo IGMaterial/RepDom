@@ -36,6 +36,7 @@ menu:
     Alergias: StructureDefinition-AllergyIntoleranceDO.html
     Medicamentos: StructureDefinition-MedicationStatementDO.html
     Condition: StructureDefinition-ConditionDO.html
+    Diagnostic Report: StructureDefinition-DiagnosticReportDO.html
   DOCUMENTOS:   
     1-Resumen Paciente: resumenpaciente.html
     2-Informe Laboratorio: reportelaboratorio.html
@@ -44,9 +45,9 @@ menu:
   MHD: 
     List: StructureDefinition-ListDO.html
     IndiceDocumentos: StructureDefinition-DocumentReferenceDO.html
-    Transaccion: StructureDefinition-BundleTransaccDO.html
+    -- Transaccion: StructureDefinition-BundleTransaccDO.html
   TERMINOLOGIAS:
-    Terminologia: terminologias.html
+    Terminología: terminologias.html
   CONECTATON 2026:
     Detalles: conectaton.html
     Validación: validacion.html
