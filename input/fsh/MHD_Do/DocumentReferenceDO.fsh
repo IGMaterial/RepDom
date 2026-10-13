@@ -1,9 +1,6 @@
 Profile: DocumentReferenceDO
 Parent: https://profiles.ihe.net/ITI/MHD/StructureDefinition/IHE.MHD.Minimal.DocumentReference
 
-/* Title: "Documento Refencia Origen"
-Description: "Documento Refencia Origen." */
-
 
 * type 1.. MS
 

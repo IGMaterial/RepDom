@@ -3,7 +3,10 @@ Parent: https://profiles.ihe.net/ITI/MHD/StructureDefinition/IHE.MHD.Minimal.Sub
 
 
 * subject only Reference(PatientDO)
-* entry.item only Reference(DocumentReferenceDO)
+//* entry.item only Reference(DocumentReferenceDO) 
+
+* entry.item only Reference(DocumentReferenceDO or DocumentReferenceDOOnco or DocumentReferenceDONotif or DocumentReferenceDOLab)
+
 
 /***************************************************************
 

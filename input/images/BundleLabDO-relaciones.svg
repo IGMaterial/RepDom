@@ -1,0 +1,90 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="1040" viewBox="0 0 1200 1040">
+  <title>BundleLabDO: documento de laboratorio y relaciones</title>
+  <desc>CompositionDOLab referencia PatientDO, PractitionerDO u OrganizationDO como autores, OrganizationDO como custodio, DiagnosticReportDO y BinaryDO. DiagnosticReportDO referencia PatientDO y contiene presentedForm. La relación de presentedForm.url con BinaryDO se muestra discontinua porque procede del ejemplo.</desc>
+  <defs>
+    <marker id="arrow" markerWidth="9" markerHeight="9" refX="8" refY="4" orient="auto"><path d="M0 0L8 4L0 8Z" fill="#6b7280"/></marker>
+    <style>
+      text{font-family:Arial,Helvetica,sans-serif;fill:#17202e;font-size:17px}
+      .heading{font-size:26px;font-weight:700}.title{font-size:21px;font-weight:700}.name{font-size:20px;font-weight:700}
+      .sub{fill:#485260;font-size:17px}.small{fill:#485260;font-size:16px}.label{fill:#485260;font-size:16px;paint-order:stroke;stroke:#f1f4f5;stroke-width:5px;stroke-linejoin:round}
+      .box{fill:white;stroke:#737b85;stroke-width:1.7}.group{fill:#f1f4f5;stroke:#737b85;stroke-width:1.5}.focus{fill:#dceafe;stroke:#2563eb;stroke-width:3}
+      .edge{fill:none;stroke:#6b7280;stroke-width:1.8;marker-end:url(#arrow)}.example{stroke-dasharray:7 5}
+    </style>
+  </defs>
+  <rect width="1200" height="1040" fill="white"/>
+  <text x="40" y="46" class="heading">Documento de laboratorio · BundleLabDO</text>
+  <text x="40" y="76" class="sub">Perfiles, secciones y referencias definidos en los archivos FSH</text>
+
+  <rect x="40" y="105" width="1120" height="775" rx="16" class="group"/>
+  <text x="65" y="141" class="title">BundleLabDO · Bundle de tipo document</text>
+  <text x="65" y="170" class="sub">Slice composition 1..1 · slicing abierto · cada entrada: fullUrl 1..1 y resource 1..1</text>
+
+  <path d="M430 270H345" class="edge"/>
+  <text x="383" y="241" text-anchor="middle" class="label">subject</text>
+  <text x="383" y="261" text-anchor="middle" class="label">1..1</text>
+  <path d="M770 252H855" class="edge"/>
+  <text x="811" y="223" text-anchor="middle" class="label">author</text>
+  <text x="811" y="244" text-anchor="middle" class="label">1..*</text>
+  <path d="M770 300H815V424H855" class="edge"/>
+  <text x="824" y="347" class="label">custodian</text>
+  <text x="824" y="369" class="label">0..1</text>
+
+  <rect x="70" y="220" width="275" height="100" rx="13" class="box"/>
+  <text x="207" y="259" text-anchor="middle" class="name">PatientDO</text>
+  <text x="207" y="289" text-anchor="middle" class="sub">Patient · paciente</text>
+
+  <rect x="430" y="215" width="340" height="110" rx="13" class="focus"/>
+  <text x="600" y="257" text-anchor="middle" class="name">CompositionDOLab</text>
+  <text x="600" y="288" text-anchor="middle" class="sub">Composition · primera entrada</text>
+
+  <rect x="855" y="200" width="275" height="132" rx="13" class="box"/>
+  <text x="992" y="232" text-anchor="middle" class="name">PractitionerDO</text>
+  <text x="992" y="259" text-anchor="middle" class="sub">u OrganizationDO</text>
+  <text x="992" y="288" text-anchor="middle" class="small">Practitioner / Organization</text>
+  <text x="992" y="311" text-anchor="middle" class="small">Uno o más autores</text>
+
+  <rect x="855" y="385" width="275" height="85" rx="13" class="box"/>
+  <text x="992" y="419" text-anchor="middle" class="name">OrganizationDO</text>
+  <text x="992" y="448" text-anchor="middle" class="sub">Organization · custodio</text>
+
+  <path d="M545 325V400H395V580" class="edge"/>
+  <text x="409" y="435" class="label">section[DiagnosticReport]</text>
+  <text x="409" y="459" class="label">entry 1..*</text>
+  <path d="M655 325V489H915V580" class="edge"/>
+  <text x="670" y="438" class="label">section[DocumentoPDF]</text>
+  <text x="670" y="462" class="label">entry 1..*</text>
+
+  <rect x="270" y="510" width="385" height="330" rx="14" class="group"/>
+  <text x="290" y="542" class="title">Informe de laboratorio</text>
+  <text x="290" y="566" class="small">Sección 1..1 · LOINC 11502-2</text>
+  <rect x="290" y="590" width="345" height="90" rx="12" class="focus"/>
+  <text x="462" y="626" text-anchor="middle" class="name">DiagnosticReportDO</text>
+  <text x="462" y="655" text-anchor="middle" class="sub">DiagnosticReport</text>
+  <path d="M462 680V745" class="edge"/>
+  <text x="477" y="719" class="label">presentedForm 1..1</text>
+  <rect x="290" y="745" width="345" height="70" rx="12" class="box"/>
+  <text x="462" y="775" text-anchor="middle" class="name">Attachment</text>
+  <text x="462" y="800" text-anchor="middle" class="sub">Documento PDF del resultado</text>
+
+  <rect x="720" y="510" width="410" height="195" rx="14" class="group"/>
+  <text x="740" y="542" class="title">Documento PDF</text>
+  <text x="740" y="566" class="small">Sección 1..1 · código declarado: 99999-9*</text>
+  <rect x="740" y="590" width="370" height="90" rx="12" class="box"/>
+  <text x="925" y="626" text-anchor="middle" class="name">BinaryDO</text>
+  <text x="925" y="655" text-anchor="middle" class="sub">Binary · contentType 1..1</text>
+
+  <path d="M290 635H207V320" class="edge"/>
+  <text x="192" y="420" text-anchor="end" class="label">subject</text>
+  <text x="192" y="444" text-anchor="end" class="label">1..1</text>
+  <path d="M635 782H925V680" class="edge example"/>
+  <text x="690" y="765" class="label">presentedForm.url</text>
+  <text x="690" y="812" class="small">Vínculo utilizado en el ejemplo</text>
+
+  <path d="M45 919H100" class="edge"/>
+  <text x="116" y="925" class="small">Relación del perfil</text>
+  <path d="M340 919H395" class="edge example"/>
+  <text x="411" y="925" class="small">Relación del ejemplo; el perfil no obliga a enlazar el mismo Binary</text>
+  <text x="40" y="963" class="small">Las cardinalidades de las referencias no equivalen a slices adicionales obligatorios del Bundle.</text>
+  <text x="40" y="991" class="small">* Código copiado del FSH; el ejemplo indica que está pendiente de revisión terminológica.</text>
+  <text x="40" y="1019" class="small">Se representan las relaciones restringidas por estos perfiles; no se enumeran todas las referencias de FHIR base.</text>
+</svg>

@@ -1,0 +1,97 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="1190" viewBox="0 0 1440 1190">
+<title>Reporte de notificación obligatoria: propuesta de relaciones</title>
+<desc>CompositionDONotif organiza condiciones, observaciones, laboratorios y secciones narrativas. ConditionCasoEpidemiologicoDO es el eje principal. Las relaciones clínicas propuestas se muestran discontinuas y no prescriben campos de referencia FHIR.</desc>
+<defs>
+ <marker id="a" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0 0L7 4L0 8Z" fill="#6b7280"/></marker>
+ <style>
+ text{font-family:Arial,Helvetica,sans-serif;fill:#17202e;font-size:18px}
+ .heading{font-size:27px;font-weight:700}.title{font-size:22px;font-weight:700}.name{font-size:20px;font-weight:700}
+ .sub{fill:#485260;font-size:17px}.small{fill:#485260;font-size:16px}
+ .label{fill:#485260;font-size:16px;paint-order:stroke;stroke:#f1f4f5;stroke-width:5px;stroke-linejoin:round}
+ .box{fill:white;stroke:#737b85;stroke-width:1.7}.group{fill:#f1f4f5;stroke:#737b85;stroke-width:1.5}.focus{fill:#dceafe;stroke:#2563eb;stroke-width:3}
+ .edge{fill:none;stroke:#6b7280;stroke-width:1.8;marker-end:url(#a)}.concept{stroke-dasharray:7 5}
+ </style>
+</defs>
+<rect width="1440" height="1190" fill="white"/>
+<text x="40" y="45" class="heading">Reporte de notificación obligatoria</text>
+<text x="40" y="76" class="sub">Propuesta de estructura · el caso epidemiológico es el eje principal del contenido clínico</text>
+<rect x="40" y="105" width="1360" height="940" rx="16" class="group"/>
+<text x="65" y="143" class="title">Documento de notificación · BundleNotifDO (Bundle document)</text>
+
+<rect x="80" y="195" width="290" height="105" rx="13" class="box"/>
+<text x="225" y="237" text-anchor="middle" class="name">PatientDO</text>
+<text x="225" y="268" text-anchor="middle" class="sub">Patient · persona notificada</text>
+<rect x="505" y="190" width="410" height="115" rx="13" class="focus"/>
+<text x="710" y="232" text-anchor="middle" class="name">CompositionDONotif</text>
+<text x="710" y="264" text-anchor="middle" class="sub">Composition · organiza el documento</text>
+<rect x="1060" y="185" width="300" height="110" rx="13" class="box"/>
+<text x="1210" y="222" text-anchor="middle" class="name">PractitionerDO</text>
+<text x="1210" y="251" text-anchor="middle" class="name">u OrganizationDO</text>
+<text x="1210" y="277" text-anchor="middle" class="sub">Autor(es) de la notificación</text>
+<rect x="1060" y="340" width="300" height="80" rx="13" class="box"/>
+<text x="1210" y="373" text-anchor="middle" class="name">OrganizationDO</text>
+<text x="1210" y="399" text-anchor="middle" class="sub">Custodio del documento</text>
+<path d="M505 246H370" class="edge"/>
+<text x="435" y="232" text-anchor="middle" class="label">subject 1..1</text>
+<path d="M915 240H1060" class="edge"/>
+<text x="986" y="225" text-anchor="middle" class="label">author 1..*</text>
+<path d="M915 280H980V380H1060" class="edge"/>
+<text x="992" y="326" class="label">custodian 0..1</text>
+
+<path d="M710 305V460" class="edge"/>
+<text x="726" y="366" class="label">section.entry</text>
+<text x="726" y="391" class="label">Condiciones del caso (propuesta)</text>
+<rect x="480" y="460" width="460" height="120" rx="13" class="focus"/>
+<text x="710" y="498" text-anchor="middle" class="name">ConditionCasoEpidemiologicoDO</text>
+<text x="710" y="530" text-anchor="middle" class="sub">Condition · eje principal</text>
+<text x="710" y="557" text-anchor="middle" class="sub">Enfermedad / evento objeto de notificación</text>
+
+<path d="M505 280H420V625H240V715" class="edge"/>
+<text x="105" y="611" class="label">section.entry · Observaciones</text>
+<path d="M915 305H955V625H1205V715" class="edge"/>
+<text x="1020" y="611" class="label">section.entry · Laboratorios</text>
+
+<rect x="70" y="650" width="410" height="365" rx="14" class="group"/>
+<text x="90" y="683" class="title">Observaciones</text>
+<rect x="90" y="715" width="370" height="80" rx="12" class="box"/>
+<text x="275" y="748" text-anchor="middle" class="name">ObservationSignoSintomaDO</text>
+<text x="275" y="775" text-anchor="middle" class="sub">Observation · signos y síntomas</text>
+<rect x="90" y="810" width="370" height="80" rx="12" class="box"/>
+<text x="275" y="843" text-anchor="middle" class="name">ObservationEstadoEmbarazoDO</text>
+<text x="275" y="870" text-anchor="middle" class="sub">Observation · estado de embarazo</text>
+<rect x="90" y="905" width="370" height="80" rx="12" class="box"/>
+<text x="275" y="938" text-anchor="middle" class="name">ObservationViajesExposiciónDO</text>
+<text x="275" y="965" text-anchor="middle" class="sub">Observation · viajes y exposición</text>
+<path d="M310 650V550H480" class="edge concept"/>
+<text x="320" y="493" class="label">Contexto y</text>
+<text x="320" y="517" class="label">hallazgos del caso</text>
+
+<rect x="515" y="690" width="390" height="115" rx="13" class="box"/>
+<text x="710" y="729" text-anchor="middle" class="name">ConditionConclusionDO</text>
+<text x="710" y="759" text-anchor="middle" class="sub">Condition · conclusión del caso</text>
+<text x="710" y="785" text-anchor="middle" class="small">Incluida mediante section.entry (propuesta)</text>
+<path d="M710 690V580" class="edge concept"/>
+<text x="728" y="628" class="label">Conclusión sobre</text>
+<text x="728" y="652" class="label">el caso epidemiológico</text>
+
+<rect x="960" y="650" width="410" height="170" rx="14" class="group"/>
+<text x="980" y="683" class="title">Laboratorios</text>
+<rect x="980" y="715" width="370" height="80" rx="12" class="box"/>
+<text x="1165" y="748" text-anchor="middle" class="name">DiagnosticReport</text>
+<text x="1165" y="775" text-anchor="middle" class="sub">Informe de resultados de laboratorio</text>
+<path d="M1110 650V550H940" class="edge concept"/>
+<text x="1124" y="512" class="label">Evidencia de laboratorio</text>
+
+<rect x="515" y="880" width="855" height="135" rx="14" class="box"/>
+<text x="540" y="917" class="title">Otras secciones · contenido no estructurado</text>
+<text x="540" y="950" class="sub">Composition.section.title + Composition.section.text</text>
+<text x="540" y="980" class="sub">Narrativa del documento, sin recursos clínicos estructurados adicionales</text>
+
+<path d="M45 1080H105" class="edge"/>
+<text x="121" y="1086" class="small">Referencia / organización del documento</text>
+<path d="M535 1080H595" class="edge concept"/>
+<text x="611" y="1086" class="small">Relación clínica conceptual con el eje principal</text>
+<text x="40" y="1122" class="small">Los perfiles Condition y Observation indicados son propuestos: aún no están definidos en los FSH revisados.</text>
+<text x="40" y="1148" class="small">Las nuevas secciones y sus cardinalidades requieren definición en CompositionDONotif.</text>
+<text x="40" y="1174" class="small">Las líneas discontinuas no especifican un campo de referencia FHIR; su implementación queda por definir.</text>
+</svg>
