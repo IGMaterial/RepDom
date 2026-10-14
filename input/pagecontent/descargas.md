@@ -22,15 +22,6 @@ Este paquete contiene los perfiles, extensiones, CodeSystems, ValueSets, ejemplo
 
 ### Definiciones Computables
 
-| Artefacto | Descripción |
-|----------|-------------|
-| `package.tgz` | Paquete FHIR NPM de la guía. |
-| `definitions.json.zip` | Definiciones computables en JSON. |
-| `definitions.xml.zip` | Definiciones computables en XML. |
-| `examples.json.zip` | Ejemplos en formato JSON. |
-| `examples.xml.zip` | Ejemplos en formato XML. |
 
-
----
-
+[`package.tgz`](package.tgz)  Paquete completo FHIR 
 

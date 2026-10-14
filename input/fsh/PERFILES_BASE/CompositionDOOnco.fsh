@@ -1,28 +1,6 @@
 Profile: CompositionDOOnco
-Parent: Composition
+Parent: CompositionDO
 Title: "Documento Clínico Oncologico"
-
-
-* status 1..1 MS
-* type 1..1 MS
-
-* time
-* subject 1..1 MS
-* subject only Reference(PatientDO)
-
-* date 1..1 MS
-
-* author 1..* MS
-* author only Reference(PractitionerDO or OrganizationDO)
-
-* title 1..1 MS
-
-* custodian 0..1 MS
-* custodian only Reference(OrganizationDO)
-
-//* section 0..* MS
-
-
 
 //----- division de secciones -------
 * section ^slicing.discriminator[0].type = #pattern

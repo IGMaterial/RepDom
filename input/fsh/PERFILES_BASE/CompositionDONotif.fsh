@@ -1,26 +1,7 @@
-Alias: $Composition-uv-ips = http://hl7.org/fhir/uv/ips/StructureDefinition/Composition-uv-ips
-
 Profile: CompositionDONotif
-Parent: Composition
+Parent: CompositionDO
 Title: "Documento Clínico Notificación Caso"
 Description: "Perfil para documentos Notificación Caso"
-
-* status 1..1 MS
-* type 1..1 MS
-
-
-* subject 1..1 MS
-* subject only Reference(PatientDO)
-
-* date 1..1 MS
-
-* author 1..* MS
-* author only Reference(PractitionerDO or OrganizationDO)
-
-* title 1..1 MS
-
-* custodian 0..1 MS
-* custodian only Reference(OrganizationDO)
 
 
 //----- division de secciones -------

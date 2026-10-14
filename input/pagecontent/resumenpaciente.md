@@ -14,11 +14,16 @@ En esta página, se documenta todos los recursos involucrados para representar 
 En esta sección se describen los perfiles especpificos realizados para este contexto de atención.
 
 
-1️⃣ Perfil de **Bundle Document**  para representar la información de resumen de paciente, incluyendo antecedentes, medicación y alergias:
+
+1️⃣ Perfil de **Document Reference NPS**  para representar el indice de documento de de atencion de paciente:
+[DocumentReferenceDONPS](StructureDefinition-DocumentReferenceDONPS.html).
+
+
+2️⃣ Perfil de **Bundle Document**  para representar la información de resumen de paciente, incluyendo antecedentes, medicación y alergias:
 [Bundle Document NPS](StructureDefinition-BundleNPSDO.html).
 
-2️⃣ Perfil de **Composition** Documento de NPS:  
-[Composition NPS](StructureDefinition-CompositionDO.html).
+3️⃣ Perfil de **Composition** Documento de NPS:  
+[Composition NPS](StructureDefinition-CompositionDONPS.html).
 
 ---
 

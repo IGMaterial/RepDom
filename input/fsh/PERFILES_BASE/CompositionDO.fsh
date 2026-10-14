@@ -1,10 +1,6 @@
-Alias: $Composition-uv-ips = http://hl7.org/fhir/uv/ips/StructureDefinition/Composition-uv-ips
-
 Profile: CompositionDO
-Parent: $Composition-uv-ips
-//Parent: Composition
-Title: "Documento Clínico IPS DO"
-Description: "Perfil para documentos clínicos FHIR."
+Parent: Composition
+Title: "Documento Clínico DO"
 
 * status 1..1 MS
 * type 1..1 MS

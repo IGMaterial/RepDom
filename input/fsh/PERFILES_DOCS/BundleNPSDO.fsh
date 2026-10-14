@@ -9,8 +9,7 @@ Id: BundleNPSDO
 
 * entry[composition].resource 1..
 
-* entry[composition].resource only  $canonicaCompositionDo
-
+* entry[composition].resource only  CompositionDONPS
 
 /* --------- PACIENTE ---------*/
 * entry[patient] ^short = "Paciente"

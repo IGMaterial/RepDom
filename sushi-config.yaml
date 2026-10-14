@@ -1,7 +1,7 @@
 id: msp.fhir.do
 canonical: https://digital.msp.gob.do/fhir/conectaton
 name: fhir-ig-do
-title: "Guía FHIR DO - Conectaton Nacional República Dominicana"
+title: "Guía FHIR DO - Conectaton Nacional República Dominicana -> 14-10-26"
 description: "Guía Conectaton Nacional de República Dominicana para recursos, extensiones, terminologías y patrones comunes de interoperabilidad FHIR."
 language: es
 license: CC-BY-4.0
