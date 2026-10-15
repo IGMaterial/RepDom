@@ -18,3 +18,8 @@ Alias: $canonicaDiagnosticReportDO = https://digital.msp.gob.do/fhir/conectaton/
 Alias: $Bundle-uv-ips = http://hl7.org/fhir/uv/ips/StructureDefinition/Bundle-uv-ips
 Alias: $Patient-uv-ips = http://hl7.org/fhir/uv/ips/StructureDefinition/Patient-uv-ips
 
+
+/******** Oncología (Registro Nacional de Cáncer) ********/
+Alias: $CIE10 = http://hl7.org/fhir/sid/icd-10
+Alias: $CIEO3 = http://terminology.hl7.org/CodeSystem/icd-o-3
+Alias: $UCUM = http://unitsofmeasure.org
