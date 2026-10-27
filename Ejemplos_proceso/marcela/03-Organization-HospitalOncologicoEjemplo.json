@@ -1,0 +1,53 @@
+{
+  "resourceType": "Organization",
+  "id": "HospitalOncologicoEjemplo",
+  "meta": {
+    "profile": [
+      "https://digital.msp.gob.do/fhir/conectaton/StructureDefinition/OrganizationDO"
+    ]
+  },
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Hospital Oncológico de Ejemplo (ORG-0457), Santo Domingo</div>"
+  },
+  "identifier": [
+    {
+      "system": "https://digital.msp.gob.do/identifiers/organization",
+      "value": "ORG-0457"
+    }
+  ],
+  "active": true,
+  "type": [
+    {
+      "coding": [
+        {
+          "system": "http://terminology.hl7.org/CodeSystem/organization-type",
+          "code": "prov",
+          "display": "Healthcare Provider"
+        }
+      ]
+    }
+  ],
+  "name": "Hospital Oncológico de Ejemplo",
+  "telecom": [
+    {
+      "system": "phone",
+      "value": "+1-809-555-0100"
+    },
+    {
+      "system": "email",
+      "value": "registro.cancer@hospital-ejemplo.do"
+    }
+  ],
+  "address": [
+    {
+      "line": [
+        "Av. Independencia 1200"
+      ],
+      "city": "Santo Domingo",
+      "state": "Distrito Nacional",
+      "postalCode": "10205",
+      "country": "DO"
+    }
+  ]
+}

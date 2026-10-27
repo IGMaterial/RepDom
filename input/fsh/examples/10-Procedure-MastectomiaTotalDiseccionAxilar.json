@@ -1,0 +1,69 @@
+{
+  "resourceType": "Procedure",
+  "id": "MastectomiaTotalDiseccionAxilar",
+  "meta": {
+    "profile": [
+      "https://digital.msp.gob.do/fhir/conectaton/StructureDefinition/SurgicalProcedureDO"
+    ]
+  },
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Mastectomía total izquierda con disección axilar (niveles I-II) – 2026-05-26.</div>"
+  },
+  "status": "completed",
+  "category": {
+    "coding": [
+      {
+        "system": "http://snomed.info/sct",
+        "code": "387713003",
+        "display": "Surgical procedure"
+      }
+    ]
+  },
+  "code": {
+    "coding": [
+      {
+        "system": "http://snomed.info/sct",
+        "code": "446109005",
+        "display": "Total mastectomy and axillary dissection"
+      }
+    ],
+    "text": "Mastectomía total con disección axilar"
+  },
+  "subject": {
+    "reference": "Patient/PacienteMariaGonzales"
+  },
+  "performedDateTime": "2026-05-26T08:00:00-04:00",
+  "performer": [
+    {
+      "actor": {
+        "reference": "Organization/HospitalOncologicoEjemplo"
+      }
+    }
+  ],
+  "reasonReference": [
+    {
+      "reference": "Condition/CancerMamaMariaGonzales"
+    }
+  ],
+  "bodySite": [
+    {
+      "coding": [
+        {
+          "system": "http://snomed.info/sct",
+          "code": "80248007",
+          "display": "Left breast structure"
+        }
+      ],
+      "text": "Mama y axila izquierdas"
+    }
+  ],
+  "outcome": {
+    "text": "Sin complicaciones intraoperatorias"
+  },
+  "note": [
+    {
+      "text": "Cirugía posterior a quimioterapia neoadyuvante AC dosis densa. Comité de tumores (2026-06-10): no se indica tratamiento adyuvante."
+    }
+  ]
+}

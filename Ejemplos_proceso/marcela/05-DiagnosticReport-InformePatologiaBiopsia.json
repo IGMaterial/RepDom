@@ -1,0 +1,86 @@
+{
+  "resourceType": "DiagnosticReport",
+  "id": "InformePatologiaBiopsia",
+  "meta": {
+    "profile": [
+      "https://digital.msp.gob.do/fhir/conectaton/StructureDefinition/PathologyReportDO"
+    ]
+  },
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Biopsia de mama izquierda: carcinoma ductal infiltrante, grado histológico 2. RE positivo 100 %, RP positivo 80 %, HER2 negativo (IHQ 1+), Ki-67 10 %. Subtipo luminal A.</div>"
+  },
+  "identifier": [
+    {
+      "system": "https://hospital-ejemplo.do/patologia/informes",
+      "value": "B26-00871"
+    }
+  ],
+  "status": "final",
+  "code": {
+    "coding": [
+      {
+        "system": "http://loinc.org",
+        "code": "11526-1",
+        "display": "Pathology study"
+      }
+    ]
+  },
+  "subject": {
+    "reference": "Patient/PacienteMariaGonzales"
+  },
+  "effectiveDateTime": "2026-02-10T10:30:00-04:00",
+  "issued": "2026-02-17T11:30:00-04:00",
+  "performer": [
+    {
+      "reference": "Organization/HospitalOncologicoEjemplo"
+    }
+  ],
+  "specimen": [
+    {
+      "reference": "Specimen/MuestraBiopsiaMamaIzq"
+    }
+  ],
+  "conclusion": "Biopsia con aguja gruesa de mama izquierda (CSE): carcinoma ductal infiltrante (NST), grado histológico 2 (Nottingham 6/9). Inmunohistoquímica: receptor de estrógeno positivo 100 % (intensidad fuerte), receptor de progesterona positivo 80 %, HER2 negativo (score 1+), Ki-67 10 %. Subtipo intrínseco subrogado: luminal A.",
+  "conclusionCode": [
+    {
+      "coding": [
+        {
+          "system": "https://digital.msp.gob.do/fhir/conectaton/CodeSystem/CSResultadosOncoDO",
+          "code": "G2",
+          "display": "Grado 2"
+        }
+      ]
+    },
+    {
+      "coding": [
+        {
+          "system": "https://digital.msp.gob.do/fhir/conectaton/CodeSystem/CSResultadosOncoDO",
+          "code": "re-positivo",
+          "display": "Receptor de estrógeno positivo"
+        }
+      ],
+      "text": "Receptor de estrógeno positivo (100 %)"
+    },
+    {
+      "coding": [
+        {
+          "system": "https://digital.msp.gob.do/fhir/conectaton/CodeSystem/CSResultadosOncoDO",
+          "code": "rp-positivo",
+          "display": "Receptor de progesterona positivo"
+        }
+      ],
+      "text": "Receptor de progesterona positivo (80 %)"
+    },
+    {
+      "coding": [
+        {
+          "system": "https://digital.msp.gob.do/fhir/conectaton/CodeSystem/CSResultadosOncoDO",
+          "code": "her2-negativo",
+          "display": "HER2 negativo"
+        }
+      ],
+      "text": "HER2 negativo (IHQ 1+)"
+    }
+  ]
+}

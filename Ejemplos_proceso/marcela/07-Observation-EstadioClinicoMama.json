@@ -1,0 +1,55 @@
+{
+  "resourceType": "Observation",
+  "id": "EstadioClinicoMama",
+  "meta": {
+    "profile": [
+      "https://digital.msp.gob.do/fhir/conectaton/StructureDefinition/CancerStageDO"
+    ]
+  },
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Estadio clínico IIIA (cT3 cN1 cM0), AJCC 8.ª ed. – 2026-02-27</div>"
+  },
+  "status": "final",
+  "code": {
+    "coding": [
+      {
+        "system": "https://digital.msp.gob.do/fhir/conectaton/CodeSystem/CSObservacionesOncoDO",
+        "code": "estadio",
+        "display": "Estadio del cáncer"
+      }
+    ]
+  },
+  "subject": {
+    "reference": "Patient/PacienteMariaGonzales"
+  },
+  "focus": [
+    {
+      "reference": "Condition/CancerMamaMariaGonzales"
+    }
+  ],
+  "effectiveDateTime": "2026-02-27",
+  "performer": [
+    {
+      "reference": "Organization/HospitalOncologicoEjemplo"
+    }
+  ],
+  "valueCodeableConcept": {
+    "coding": [
+      {
+        "system": "https://digital.msp.gob.do/fhir/conectaton/CodeSystem/CSResultadosOncoDO",
+        "code": "estadio-III",
+        "display": "Estadio III"
+      }
+    ],
+    "text": "Estadio IIIA (cT3 cN1 cM0)"
+  },
+  "method": {
+    "text": "AJCC TNM 8.ª edición – estadio clínico anatómico (pretratamiento)"
+  },
+  "note": [
+    {
+      "text": "Tumor de 5,6 cm en ecografía y mamografía; adenopatía axilar izquierda móvil (cN1). TC de tórax-abdomen-pelvis y gammagrafía ósea sin evidencia de metástasis a distancia."
+    }
+  ]
+}

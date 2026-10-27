@@ -1,0 +1,118 @@
+{
+  "resourceType": "Condition",
+  "id": "CancerMamaMariaGonzales",
+  "meta": {
+    "profile": [
+      "https://digital.msp.gob.do/fhir/conectaton/StructureDefinition/PrimaryCancerConditionDO"
+    ]
+  },
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Carcinoma ductal infiltrante de mama izquierda, cuadrante superior externo (C50.4 · 8500/3), luminal A. Diagnosticado por biopsia el 2026-02-17.</div>"
+  },
+  "extension": [
+    {
+      "url": "https://digital.msp.gob.do/fhir/conectaton/StructureDefinition/HistologyMorphologyBehaviorDO",
+      "valueCodeableConcept": {
+        "coding": [
+          {
+            "system": "http://terminology.hl7.org/CodeSystem/icd-o-3",
+            "code": "8500/3"
+          }
+        ],
+        "text": "Carcinoma ductal infiltrante, SAI"
+      }
+    }
+  ],
+  "clinicalStatus": {
+    "coding": [
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+        "code": "active"
+      }
+    ]
+  },
+  "verificationStatus": {
+    "coding": [
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/condition-ver-status",
+        "code": "confirmed"
+      }
+    ]
+  },
+  "category": [
+    {
+      "coding": [
+        {
+          "system": "http://terminology.hl7.org/CodeSystem/condition-category",
+          "code": "problem-list-item"
+        }
+      ]
+    }
+  ],
+  "code": {
+    "coding": [
+      {
+        "system": "http://hl7.org/fhir/sid/icd-10",
+        "code": "C50.4"
+      }
+    ],
+    "text": "Cáncer de mama ductal infiltrante luminal A"
+  },
+  "bodySite": [
+    {
+      "extension": [
+        {
+          "url": "https://digital.msp.gob.do/fhir/conectaton/StructureDefinition/LateralidadDO",
+          "valueCodeableConcept": {
+            "coding": [
+              {
+                "system": "http://snomed.info/sct",
+                "code": "7771000",
+                "display": "Left"
+              }
+            ]
+          }
+        }
+      ],
+      "coding": [
+        {
+          "system": "http://terminology.hl7.org/CodeSystem/icd-o-3",
+          "code": "C50.4"
+        }
+      ],
+      "text": "Cuadrante superior externo de la mama izquierda"
+    }
+  ],
+  "subject": {
+    "reference": "Patient/PacienteMariaGonzales"
+  },
+  "onsetDateTime": "2026-02-17",
+  "recordedDate": "2026-02-20",
+  "stage": [
+    {
+      "summary": {
+        "text": "Estadio IIIA (cT3 cN1 cM0)"
+      },
+      "assessment": [
+        {
+          "reference": "Observation/EstadioClinicoMama"
+        }
+      ]
+    }
+  ],
+  "evidence": [
+    {
+      "detail": [
+        {
+          "reference": "DiagnosticReport/InformePatologiaBiopsia"
+        }
+      ]
+    }
+  ],
+  "note": [
+    {
+      "text": "Subtipo intrínseco subrogado luminal A (RE 100 %, RP 80 %, HER2 negativo, Ki-67 10 %)."
+    }
+  ]
+}

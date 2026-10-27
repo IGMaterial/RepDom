@@ -1,0 +1,68 @@
+{
+  "resourceType": "MedicationStatement",
+  "id": "QtNeoadyCiclofosfamida",
+  "meta": {
+    "profile": [
+      "https://digital.msp.gob.do/fhir/conectaton/StructureDefinition/CancerMedicationStatementDO"
+    ]
+  },
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Ciclofosfamida – esquema AC dosis densa neoadyuvante, 4 ciclos (2026-03-09 a 2026-04-20). Completado.</div>"
+  },
+  "status": "completed",
+  "medicationCodeableConcept": {
+    "coding": [
+      {
+        "system": "http://www.whocc.no/atc",
+        "code": "L01AA01",
+        "display": "cyclophosphamide"
+      }
+    ],
+    "text": "Ciclofosfamida"
+  },
+  "subject": {
+    "reference": "Patient/PacienteMariaGonzales"
+  },
+  "effectivePeriod": {
+    "start": "2026-03-09",
+    "end": "2026-04-20"
+  },
+  "dateAsserted": "2026-06-15",
+  "informationSource": {
+    "reference": "Organization/HospitalOncologicoEjemplo"
+  },
+  "reasonReference": [
+    {
+      "reference": "Condition/CancerMamaMariaGonzales"
+    }
+  ],
+  "note": [
+    {
+      "text": "Quimioterapia neoadyuvante, esquema AC dosis densa (doxorrubicina + ciclofosfamida) cada 14 días x 4 ciclos con soporte de G-CSF. Ciclos: 2026-03-09, 2026-03-23, 2026-04-06, 2026-04-20."
+    }
+  ],
+  "dosage": [
+    {
+      "sequence": 1,
+      "text": "Ciclofosfamida 600 mg/m² IV, día 1 cada 14 días, 4 ciclos",
+      "timing": {
+        "repeat": {
+          "count": 4,
+          "frequency": 1,
+          "period": 14,
+          "periodUnit": "d"
+        }
+      },
+      "route": {
+        "coding": [
+          {
+            "system": "http://snomed.info/sct",
+            "code": "47625008",
+            "display": "Intravenous route"
+          }
+        ]
+      }
+    }
+  ]
+}

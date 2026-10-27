@@ -18,7 +18,7 @@ Description: "Documento del caso para el Registro Nacional de Cáncer. Hereda de
     pathologyReport 0..* MS and
     pathologyResult 0..* MS and
     cancerStage 0..* MS and
-    riskAssessment 0..1 MS and
+    /** riskAssessment 0..1 MS and */
     surgicalProcedure 0..* MS and
     radiotherapyCourse 0..* MS and
     cancerMedication 0..* MS and
@@ -36,8 +36,8 @@ Description: "Documento del caso para el Registro Nacional de Cáncer. Hereda de
 * entry[cancerStage] ^short = "Estadio del cáncer"
 * entry[cancerStage].resource only CancerStageDO
 
-* entry[riskAssessment] ^short = "Grupo de riesgo (cáncer infantil)"
-* entry[riskAssessment].resource only RiskAssessmentDO
+/** entry[riskAssessment] ^short = "Grupo de riesgo (cáncer infantil)"
+* entry[riskAssessment].resource only RiskAssessmentDO*/
 
 * entry[surgicalProcedure] ^short = "Cirugía oncológica"
 * entry[surgicalProcedure].resource only SurgicalProcedureDO
@@ -48,5 +48,5 @@ Description: "Documento del caso para el Registro Nacional de Cáncer. Hereda de
 * entry[cancerMedication] ^short = "Tratamiento farmacológico oncológico"
 * entry[cancerMedication].resource only CancerMedicationStatementDO
 
-* entry[relatedPersonTutor] ^short = "Tutor del paciente (cáncer infantil)"
-* entry[relatedPersonTutor].resource only RelatedPersonTutorDO
+/** entry[relatedPersonTutor] ^short = "Tutor del paciente (cáncer infantil)"
+* entry[relatedPersonTutor].resource only RelatedPersonTutorDO*/

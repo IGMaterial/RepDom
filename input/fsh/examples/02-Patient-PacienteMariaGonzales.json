@@ -1,0 +1,75 @@
+{
+  "resourceType": "Patient",
+  "id": "PacienteMariaGonzales",
+  "meta": {
+    "profile": [
+      "https://digital.msp.gob.do/fhir/conectaton/StructureDefinition/PatientDO"
+    ]
+  },
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">María Gonzales · F · 1978-04-12 · Cédula 001-1987654-3 · Pasaporte RD4827316</div>"
+  },
+  "identifier": [
+    {
+      "use": "official",
+      "type": {
+        "coding": [
+          {
+            "system": "https://digital.msp.gob.do/fhir/conectaton/CodeSystem/CSIdentificadoresPersona",
+            "code": "CED",
+            "display": "Cédula"
+          }
+        ]
+      },
+      "system": "https://digital.msp.gob.do/fhir/sid/cedula",
+      "value": "00119876543"
+    },
+    {
+      "use": "secondary",
+      "type": {
+        "coding": [
+          {
+            "system": "https://digital.msp.gob.do/fhir/conectaton/CodeSystem/CSIdentificadoresPersona",
+            "code": "PAS",
+            "display": "Pasaporte"
+          }
+        ]
+      },
+      "system": "http://hl7.org/fhir/sid/passport-DOM",
+      "value": "RD4827316"
+    }
+  ],
+  "active": true,
+  "name": [
+    {
+      "use": "official",
+      "text": "María Gonzales",
+      "family": "Gonzales",
+      "given": [
+        "María"
+      ]
+    }
+  ],
+  "telecom": [
+    {
+      "system": "phone",
+      "value": "+1-809-555-0142",
+      "use": "mobile"
+    }
+  ],
+  "gender": "female",
+  "birthDate": "1978-04-12",
+  "address": [
+    {
+      "use": "home",
+      "line": [
+        "Calle Las Palmas 27, Ensanche Ozama"
+      ],
+      "city": "Santo Domingo Este",
+      "state": "Santo Domingo",
+      "postalCode": "11506",
+      "country": "DO"
+    }
+  ]
+}

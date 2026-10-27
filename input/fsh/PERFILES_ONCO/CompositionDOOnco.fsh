@@ -53,7 +53,8 @@ Description: "Documento del caso para el Registro Nacional de Cáncer. Todo el c
 * section[Estadificacion].code = CSSeccionesOncoDO#estadificacion
 * section[Estadificacion].title 1.. MS
 * section[Estadificacion].entry 1.. MS
-* section[Estadificacion].entry only Reference(CancerStageDO or RiskAssessmentDO)
+* section[Estadificacion].entry only Reference(CancerStageDO)
+// or RiskAssessmentDO)
 
 
 //------ Tratamientos ------------

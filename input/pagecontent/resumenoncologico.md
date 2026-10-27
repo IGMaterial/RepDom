@@ -20,7 +20,6 @@ Esta página describe los perfiles FHIR utilizados para representar el resumen o
 | [Informe de Patología](StructureDefinition-PathologyReportDO.html) | Informe anatomopatológico, con grado histológico y marcadores como receptores de estrógeno, receptores de progesterona y HER2. |
 | [Resultado de Patología](StructureDefinition-PathologyResultDO.html) | Resultado estructurado de patología, por ejemplo, profundidad de Breslow o variante genómica. |
 | [Estadio del Cáncer](StructureDefinition-CancerStageDO.html) | Estadio del cáncer primario, con fecha y sistema de estadificación. |
-| [Grupo de Riesgo](StructureDefinition-RiskAssessmentDO.html) | Grupo de riesgo del cáncer infantil. |
 | [Cirugía Oncológica](StructureDefinition-SurgicalProcedureDO.html) | Procedimiento quirúrgico realizado para tratar el cáncer primario. |
 | [Curso de Radioterapia](StructureDefinition-RadiotherapyCourseDO.html) | Curso de radioterapia, con período de tratamiento y sitio irradiado. |
 | [Tratamiento Farmacológico Oncológico](StructureDefinition-CancerMedicationStatementDO.html) | Tratamiento sistémico del cáncer, como quimioterapia, hormonoterapia, inmunoterapia o terapia dirigida. |
@@ -36,7 +35,7 @@ Todas las secciones requieren código, título y narrativa. La cardinalidad de l
 | :--- | :--- | :--- | :--- |
 | **Diagnóstico** (`Diagnostico`) | `1..1` | `1..1` | [Cáncer Primario](StructureDefinition-PrimaryCancerConditionDO.html) |
 | **Patología** (`Patologia`) | `0..1` | `1..*` | [Informe de Patología](StructureDefinition-PathologyReportDO.html) |
-| **Estadificación y riesgo** (`Estadificacion`) | `0..1` | `1..*` | [Estadio del Cáncer](StructureDefinition-CancerStageDO.html) o [Grupo de Riesgo](StructureDefinition-RiskAssessmentDO.html) |
+| **Estadificación y riesgo** (`Estadificacion`) | `0..1` | `1..*` | [Estadio del Cáncer](StructureDefinition-CancerStageDO.html) |
 | **Tratamientos** (`Tratamientos`) | `0..1` | `1..*` | [Cirugía Oncológica](StructureDefinition-SurgicalProcedureDO.html) o [Curso de Radioterapia](StructureDefinition-RadiotherapyCourseDO.html) o [Tratamiento Farmacológico Oncológico](StructureDefinition-CancerMedicationStatementDO.html) |
 
 La sección **Documento PDF** está prevista en el diseño, pero actualmente no está activa en `CompositionDOOnco`; por tanto, no forma parte de las secciones obligatorias ni opcionales de este perfil.

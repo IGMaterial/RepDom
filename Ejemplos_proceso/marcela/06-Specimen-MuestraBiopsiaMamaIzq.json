@@ -1,0 +1,53 @@
+{
+  "resourceType": "Specimen",
+  "id": "MuestraBiopsiaMamaIzq",
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Cilindros de biopsia con aguja gruesa ecoguiada de mama izquierda, CSE, obtenidos el 2026-02-10.</div>"
+  },
+  "accessionIdentifier": {
+    "system": "https://hospital-ejemplo.do/patologia/accesion",
+    "value": "B26-00871"
+  },
+  "status": "available",
+  "type": {
+    "coding": [
+      {
+        "system": "http://snomed.info/sct",
+        "code": "122737001",
+        "display": "Specimen from breast obtained by core needle biopsy"
+      }
+    ]
+  },
+  "subject": {
+    "reference": "Patient/PacienteMariaGonzales"
+  },
+  "receivedTime": "2026-02-10T13:00:00-04:00",
+  "collection": {
+    "collectedDateTime": "2026-02-10T10:30:00-04:00",
+    "quantity": {
+      "value": 4,
+      "unit": "cilindros"
+    },
+    "method": {
+      "coding": [
+        {
+          "system": "http://snomed.info/sct",
+          "code": "432550005",
+          "display": "Core needle biopsy of breast using ultrasound guidance"
+        }
+      ],
+      "text": "Biopsia con aguja gruesa (14G) guiada por ecografía"
+    },
+    "bodySite": {
+      "coding": [
+        {
+          "system": "http://snomed.info/sct",
+          "code": "80248007",
+          "display": "Left breast structure"
+        }
+      ],
+      "text": "Mama izquierda, cuadrante superior externo"
+    }
+  }
+}

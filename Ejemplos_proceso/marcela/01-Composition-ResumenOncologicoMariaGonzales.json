@@ -1,0 +1,134 @@
+{
+  "resourceType": "Composition",
+  "id": "ResumenOncologicoMariaGonzales",
+  "meta": {
+    "profile": [
+      "https://digital.msp.gob.do/fhir/conectaton/StructureDefinition/CompositionDOOnco"
+    ]
+  },
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Resumen oncológico de María Gonzales – Hospital Oncológico de Ejemplo, 2026-06-15.</div>"
+  },
+  "identifier": {
+    "system": "https://hospital-ejemplo.do/documentos",
+    "value": "RO-2026-000318"
+  },
+  "status": "final",
+  "type": {
+    "coding": [
+      {
+        "system": "http://loinc.org",
+        "code": "115562-1",
+        "display": "Oncology Clinical Document"
+      }
+    ]
+  },
+  "subject": {
+    "reference": "Patient/PacienteMariaGonzales",
+    "display": "María Gonzales"
+  },
+  "date": "2026-06-15T09:00:00-04:00",
+  "author": [
+    {
+      "reference": "Organization/HospitalOncologicoEjemplo",
+      "display": "Hospital Oncológico de Ejemplo"
+    }
+  ],
+  "title": "Resumen oncológico – Notificación de caso al Registro Nacional de Cáncer",
+  "custodian": {
+    "reference": "Organization/HospitalOncologicoEjemplo"
+  },
+  "section": [
+    {
+      "title": "Diagnóstico",
+      "code": {
+        "coding": [
+          {
+            "system": "https://digital.msp.gob.do/fhir/conectaton/CodeSystem/CSSeccionesOncoDO",
+            "code": "diagnostico",
+            "display": "Diagnóstico de cáncer primario"
+          }
+        ]
+      },
+      "text": {
+        "status": "generated",
+        "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Carcinoma ductal infiltrante de mama izquierda, CSE (CIE-10 C50.4; CIE-O-3 C50.4, 8500/3), luminal A. Fecha de diagnóstico: 2026-02-17 (biopsia).</div>"
+      },
+      "entry": [
+        {
+          "reference": "Condition/CancerMamaMariaGonzales"
+        }
+      ]
+    },
+    {
+      "title": "Patología",
+      "code": {
+        "coding": [
+          {
+            "system": "http://loinc.org",
+            "code": "30954-2",
+            "display": "Relevant diagnostic tests/laboratory data Narrative"
+          }
+        ]
+      },
+      "text": {
+        "status": "generated",
+        "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Biopsia con aguja gruesa (2026-02-10): CDI grado 2. RE 100 %, RP 80 %, HER2 negativo (1+), Ki-67 10 %.</div>"
+      },
+      "entry": [
+        {
+          "reference": "DiagnosticReport/InformePatologiaBiopsia"
+        }
+      ]
+    },
+    {
+      "title": "Estadificación",
+      "code": {
+        "coding": [
+          {
+            "system": "https://digital.msp.gob.do/fhir/conectaton/CodeSystem/CSSeccionesOncoDO",
+            "code": "estadificacion",
+            "display": "Estadificación y riesgo"
+          }
+        ]
+      },
+      "text": {
+        "status": "generated",
+        "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Estadio clínico IIIA (cT3 cN1 cM0), AJCC 8.ª edición – 2026-02-27.</div>"
+      },
+      "entry": [
+        {
+          "reference": "Observation/EstadioClinicoMama"
+        }
+      ]
+    },
+    {
+      "title": "Tratamientos",
+      "code": {
+        "coding": [
+          {
+            "system": "http://loinc.org",
+            "code": "47519-4",
+            "display": "History of Procedures Document"
+          }
+        ]
+      },
+      "text": {
+        "status": "generated",
+        "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Quimioterapia neoadyuvante AC dosis densa x4 (2026-03-09 a 2026-04-20). Mastectomía total izquierda con disección axilar (2026-05-26). Sin tratamiento adyuvante.</div>"
+      },
+      "entry": [
+        {
+          "reference": "MedicationStatement/QtNeoadyDoxorrubicina"
+        },
+        {
+          "reference": "MedicationStatement/QtNeoadyCiclofosfamida"
+        },
+        {
+          "reference": "Procedure/MastectomiaTotalDiseccionAxilar"
+        }
+      ]
+    }
+  ]
+}
