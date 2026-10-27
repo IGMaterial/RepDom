@@ -35,3 +35,12 @@ En este apartado se describen las diferentes secciones incluidas en el documento
 | ✅ **Documento PDF** | [Documento PDF](StructureDefinition-BinaryDO.html). | Representa el documento PDF del resultado de Laboratorio para poder visualizarlo |
 
 
+
+
+### **Representación gráfica de la notificación**
+
+Diagrama de recursos involucrados:
+
+<div align="left" >
+  <img  style="border: 1px solid; color: black; width: 50%; height: 50%;" src="bundle-lab-do.png" alt="Diagrama de recursos de notificación epidemiológica" /> 
+</div>

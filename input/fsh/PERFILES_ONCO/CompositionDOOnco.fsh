@@ -24,8 +24,9 @@ Description: "Documento del caso para el Registro Nacional de Cáncer. Todo el c
     Diagnostico 1..1 MS and
     Patologia 0..1 MS and
     Estadificacion 0..1 MS and
-    Tratamientos 0..1 MS and
-    DocumentoPDF 0..1 MS
+    Tratamientos 0..1 MS 
+    //and
+    //DocumentoPDF 0..1 MS
 
 
 //------ Diagnóstico: cáncer primario ------------
@@ -65,6 +66,7 @@ Description: "Documento del caso para el Registro Nacional de Cáncer. Todo el c
 
 
 //------ Documento PDF ------------
+/*
 * section[DocumentoPDF] ^short = "Sección Documento PDF"
 
 * section[DocumentoPDF].code MS 
@@ -74,3 +76,4 @@ Description: "Documento del caso para el Registro Nacional de Cáncer. Todo el c
 
 * section[DocumentoPDF].entry 1.. MS
 * section[DocumentoPDF].entry only Reference($canonicaBinary)
+*/

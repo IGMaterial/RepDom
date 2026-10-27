@@ -1,12 +1,12 @@
 id: msp.fhir.do
 canonical: https://digital.msp.gob.do/fhir/conectaton
 name: fhir-ig-do
-title: "Guía FHIR DO - Conectaton Nacional República Dominicana -> 14-10-26"
+title: "Guía FHIR DO - Conectaton Nacional República Dominicana"
 description: "Guía Conectaton Nacional de República Dominicana para recursos, extensiones, terminologías y patrones comunes de interoperabilidad FHIR."
 language: es
 license: CC-BY-4.0
 status: draft
-version: 0.2.0
+version: 0.2.1
 fhirVersion: 4.0.1
 copyrightYear: 2026
 releaseLabel: "ci-build"
@@ -40,12 +40,12 @@ menu:
   DOCUMENTOS:   
     1-Resumen Paciente: resumenpaciente.html
     2-Informe Laboratorio: reportelaboratorio.html
-    3-Notificación Individual Caso: notificacionepidemiologica.html
+    3-Notificación Individual de Caso: notificacionepidemiologica.html
     4-Registro Nacional de Cáncer: resumenoncologico.html
   MHD: 
     List: StructureDefinition-ListDO.html
     IndiceDocumentos: StructureDefinition-DocumentReferenceDO.html
-    -- Transaccion: StructureDefinition-BundleTransaccDO.html
+    -- Transacciones: StructureDefinition-BundleTransaccDO.html
   TERMINOLOGIAS:
     Terminología: terminologias.html
   CONECTATON 2026:
