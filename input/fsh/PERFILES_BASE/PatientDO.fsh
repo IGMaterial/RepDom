@@ -9,7 +9,7 @@ Description: "Perfil para representar pacientes."
 * identifier 1..* MS
 //* identifier.system 1..1 MS
 * identifier.value 1..1 MS
-* identifier.type 0..1 MS
+* identifier.type 1..1 MS
 * identifier.type from VSTipoIdentifPacDO //(extensible)
 
 * name 1..* MS

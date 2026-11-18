@@ -21,8 +21,9 @@ Description: "Documento del caso para el Registro Nacional de Cáncer. Hereda de
     /** riskAssessment 0..1 MS and */
     surgicalProcedure 0..* MS and
     radiotherapyCourse 0..* MS and
-    cancerMedication 0..* MS and
-    relatedPersonTutor 0..1 MS
+    cancerMedication 0..* MS 
+    //and
+    //relatedPersonTutor 0..1 MS
 
 * entry[primaryCancerCondition] ^short = "Cáncer primario"
 * entry[primaryCancerCondition].resource only PrimaryCancerConditionDO
